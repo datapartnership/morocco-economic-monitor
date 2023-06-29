@@ -6,3 +6,15 @@ parts:
     numbered: False
     chapters:
       - file: reports/strategic-brief.md
+  - caption: Data Goods Overview and Foundational Data
+    numbered: False
+    chapters:
+      - file: docs/introduction_to_data_goods
+      - file: docs/foundational_datasets_and_data_products.md
+  - caption: Data Products
+  - caption: Sample Indicators and Insights
+    chapters:
+      - file: docs/sample-indicators  
+  - caption: Acknowledgements
+    chapters:
+      - file: docs/team.md
