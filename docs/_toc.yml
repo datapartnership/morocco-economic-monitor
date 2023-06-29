@@ -2,10 +2,6 @@ format: jb-book
 root: README
 
 parts:
-  - caption: Strategic Brief
-    numbered: False
-    chapters:
-      - file: reports/strategic-brief.md
   - caption: Data Goods Overview and Foundational Data
     numbered: False
     chapters:
