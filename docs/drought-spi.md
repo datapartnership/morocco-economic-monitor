@@ -87,7 +87,8 @@ Numerous indices for measuring drought, including SPI, SPEI, PDSI, among others,
 
 The run theory was initially introduced by Yevjevich in [1967](https://www.engr.colostate.edu/ce/facultystaff/yevjevich/papers/Yevjevich_n1_1963.pdf) and has since been used to identify drought characteristics such as duration, severity, intensity, and interarrival.
 
-![RunTheory](./images/runtheory.png)
+![RunTheory](https://github.com/datapartnership/morocco-economic-monitor/blob/af60fdd56ada8163a64dac17c1283cfd0cc85934/docs/images/runtheory.jpg)
+
 
 Drought events and characteristics at all grid were identified using calculated monthly SPI for the total period of 43 years (1981–2021). Specifically, a drought event is defined as the period in which SPI is continuously below a critical threshold (-1.2, -1.5 and -2.0), respectively. 
 
