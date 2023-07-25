@@ -79,20 +79,31 @@ Below is the SPI example for different time scale and how to interpret the value
 
 	![SPI12](./images/spi01.png)
 
+In addition to geographical maps, time series charts offer a compelling visualization tool that vividly captures the evolution of drought conditions. These charts, with their month-by-month and year-by-year granularity, effectively illustrate the changing dynamics of drought. Furthermore, they provide insightful details on the percentage of regions affected over time, painting a comprehensive picture of how droughts impact different areas periodically. 
+
+* National
+
+	![SPI6-timeseries-adm0](./images/chart_spi06/chart_spi06_ma000000.png)
+
+* Admin1
+
+	![SPI6-timeseries-adm1](./images/chart_spi06/chart_spi06_ma001000.png)
+
+* Admin2
+
+	![SPI6-timeseries-adm2](./images/chart_spi06/chart_spi06_ma001001.png)
+
 ## SPI-based drought characteristics
 
 Droughts usually take a season or more to develop. Longer time scales (>12 months) are better to measure the effects of a precipitation deficit on different water resource components (stream flow, soil moisture, groundwater and reservoir storage) and the impact to agricultural practices in longer term.
 
 Numerous indices for measuring drought, including SPI, SPEI, PDSI, among others, have been suggested in various research studies. The choice of a particular index often depends on the data that is available. Even though the interpretation and definition varies for each index, most of them can be described using the run theory methodology.
 
-The run theory was initially introduced by Yevjevich in [1967](https://www.engr.colostate.edu/ce/facultystaff/yevjevich/papers/Yevjevich_n1_1963.pdf) and has since been used to identify drought characteristics such as duration, severity, intensity, and interarrival.
+The run theory was initially introduced by Yevjevich in [1967](https://www.engr.colostate.edu/ce/facultystaff/yevjevich/papers/HydrologyPapers_n23_1967.pdf) and has since been used to identify drought characteristics. The paper from Le, et al in [2019](https://doi.org/10.1002/joc.6164) provide better explanation about it: duration, severity, intensity, and interarrival.
 
-![RunTheory](https://github.com/datapartnership/morocco-economic-monitor/blob/af60fdd56ada8163a64dac17c1283cfd0cc85934/docs/images/runtheory.jpg)
+![RunTheory](./images/runtheory.png)
 
-
-Drought events and characteristics at all grid were identified using calculated monthly SPI for the total period of 43 years (1981–2021). Specifically, a drought event is defined as the period in which SPI is continuously below a critical threshold (-1.2, -1.5 and -2.0), respectively. 
-
-For each category, we identified and analysed the following four main drought characteristics: events (E), duration (D), inter-arrival time (T), magnitude (M), and severity (S = M/D).
+Illustration of drought events and characteristics based on run theory (adapted from Yevjevich, 1967). 
 
 * Event: Number of months in which the SPEI is less than a threshold.
 * Duration D: the number of consecutive months in which the SPEI is below the threshold.
@@ -100,12 +111,26 @@ For each category, we identified and analysed the following four main drought ch
 * Magnitude M: the absolute cumulative SPEI value during drought events. Unitless
 * Severity S: the number came from magnitude divided by duration to get level of severity. Unitless
 
+![SPI12-DR](./images/maps/mar_cli_spi12_drought_characteristics_chirps.png)
+
+:::{note}
+Currently we are still not sure on Inter-arrival time usefulness, even though we are confident with the algorithm and calculation for this following above paper. 
+
+Let say within 5 year in different periods (1991-1995 and 2015-2019), there are drought event A which start from Jan 1991 and end in May 1991, then start again in Dec 1995. Then drought event B start from Jan 2015 and end in May 2019, then start again in Dec 2019. Both event will have Inter-arrivale time value 59, although the drought duration are very different. Further exploration are needed before we can use this variable.
+
+We have no problem with the Magnitude (the run sum of negatives deviations) variable, everything is correct and feasible to use to see the magnitude of drought events.
+
+On the Severity, as the equation is simple: magnitude divide by duration, but we feel this is not good enough or good way to measure the severity. It's because the duration came from cumulative sum of the event, it means the duration value always higher at the end of drought event. While we are expecting the Severity pattern is following the Magnitude that varies month to month, to give a sense of how severity changes as the drought develops and then subsides.
+
+Actually, what we doubted above only happens if we use monthly time series data for monitoring. But if we focus on a single drought event and look for its characteristics, we will get accurate results.
+:::
 
 ## References
 
-https://library.wmo.int/doc_num.php?explnum_id=7768
-McKee, T. B., N. J. Doesken, and J. Kleist, 1993: The relationship of drought frequency and duration of time scales. Eighth Conference on Applied Climatology, American Meteorological Society, Jan17-23, 1993, Anaheim CA, pp.179-186.
-McKee, T. B., N. J. Doesken, and J. Kleist, 1995: Drought monitoring with multiple time scales. Ninth Conference on Applied Climatology, American Meteorological Society, Jan15-20, 1995, Dallas TX, pp.233-236.
-Guttman, N. B., 1998: Comparing the Palmer Drought Index and the Standardized Precipitation Index. J. Amer. Water Resources Assoc., 34(1), 113-121.
-Guttman, N. B., 1999: Accepting the Standardized Precipitation Index: A calculation algorithm. J. Amer. Water Resources Assoc., 35(2), 311-322.
-https://www.engr.colostate.edu/ce/facultystaff/yevjevich/papers/Yevjevich_n1_1963.pdf
+* https://library.wmo.int/doc_num.php?explnum_id=7768
+* McKee, T. B., N. J. Doesken, and J. Kleist, 1993: The relationship of drought frequency and duration of time scales. Eighth Conference on Applied Climatology, American Meteorological Society, Jan17-23, 1993, Anaheim CA, pp.179-186.
+* McKee, T. B., N. J. Doesken, and J. Kleist, 1995: Drought monitoring with multiple time scales. Ninth Conference on Applied Climatology, American Meteorological Society, Jan15-20, 1995, Dallas TX, pp.233-236.
+* Guttman, N. B., 1998: Comparing the Palmer Drought Index and the Standardized Precipitation Index. J. Amer. Water Resources Assoc., 34(1), 113-121.
+* Guttman, N. B., 1999: Accepting the Standardized Precipitation Index: A calculation algorithm. J. Amer. Water Resources Assoc., 35(2), 311-322.
+* Yevjevich, V. M. (1967). Objective approach to definitions and investigations of continental hydrologic droughts, An. Hydrology papers (Colorado State University); no. 23. https://www.engr.colostate.edu/ce/facultystaff/yevjevich/papers/HydrologyPapers_n23_1967.pdf
+* Le, P. V. V., Phan‐Van, T., Mai, K. V., & Tran, D. Q. (2019). Space‐time variability of drought over Vietnam. International Journal of Climatology. https://doi.org/10.1002/joc.6164

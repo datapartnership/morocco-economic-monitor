@@ -1,18 +1,18 @@
-# How-to guide
+# How-to guide SPI analysis
 
 In this section provide information on how to access and download satellite precipitation estimates data, and use it to calculate SPI on defined time scales.
 
 ## 0. Working Directory
 
-For this tutorial, I am working on these folder `/mnt/x/Temp/CHIRPS/SPI/mar/` directory. I have sub-folders inside this directory:
+For this tutorial, We are working on these folder `/mnt/x/Temp/CHIRPS/SPI/mar/` directory. We have sub-folders inside this directory:
 
 1. `00_downloads`
 
-	Place to put downloaded IMERG or CHIRPS data
+	Place to put downloaded CHIRPS data
 
 2. `01_input_geotiff`
 
-	Place to put fitting parameters output from the calculation
+	Place to put GeoTIFF file that will use to convert to single netCDF with time dimension enabled
 
 3. `02_input_netcdf`
 
@@ -20,27 +20,27 @@ For this tutorial, I am working on these folder `/mnt/x/Temp/CHIRPS/SPI/mar/` di
 
 4. `03_intermediate_output_netcdf`
 
-	Place to put GeoTIFF file that will use to convert to single netCDF with time dimension enabled
+	Place to put netCDF outputt generated from `climate-indices` package
 
 5. `04_fitting`
 
-	Output folder for SPI calculation
+	Place to put fitting parameters output from the calculation
 
 6. `05_spi_output_netcdf`
 
-	Temporary for nc files from CDO arrange dimension process
+	Output folder for SPI calculation following CF convention
 
 7. `06_output_geotiff`
 
-	Final output of SPI, generate by CDO and GDAL
+	GeoTIFF output, generate by CDO and GDAL
 
 8. `07_drought_variable`
 
-	Final output of SPI, generate by CDO and GDAL
+	SPI-based drought characteristic output 
 
 9. `08_tabular`
 
-	Python script location to convert bunch of GeoTIFF file to single netCDF
+	Tabular data of the SPI and derivative products, comes with admin2 information
 
 10. `09_shapefiles`
 
@@ -81,7 +81,7 @@ The [climate-indices](https://pypi.org/project/climate-indices/) python package 
 
 Let's download CHIRPS [monthly data in GeoTIFF](https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/) format and prepare it as input for SPI calculation.
 
-* Navigate to `~/00_downloads` folder in your directory. Download using `wget` all CHIRPS monthly data in GeoTIFF format from Jan 1981 to May 2023 (this is lot of data +-7GB zipped files, and become 27GB after extraction, please make sure you have bandwidth and unlimited data package). Paste and Enter below script in your Terminal.
+* Navigate to `/00_downloads` folder in your directory. Download using `wget` all CHIRPS monthly data in GeoTIFF format from Jan 1981 to May 2023 (this is lot of data +-7GB zipped files, and become 27GB after extraction, please make sure you have bandwidth and unlimited data package). Paste and Enter below script in your Terminal.
 
 ```bash
 mkdir CHIRPS
@@ -98,7 +98,7 @@ gunzip *.gz
 
 ### 1.3. Clip data using a shapefile based on area of interest
 
-* Download the Morocco boundary shapefile [https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip](https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip). And save it in the `08_shapefiles` directory above then unzip it.
+* Download the Morocco boundary shapefile [https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip](https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip). And save it in the `09_shapefiles` directory above then unzip it.
 
 !!! info
     You can use your own boundary in shapefile and use it to clip the rainfall raster data based on your preferred area of interest.
@@ -106,7 +106,7 @@ gunzip *.gz
 * Clip your area of interest using Morocco boundary and save it to `01_input_geotiff` directory. We will use `gdalwarp` command from GDAL to clip all GeoTIFF files in a folder.
 
 ```bash
-for i in `find *.tif`; do gdalwarp --config GDALWARP_IGNORE_BAD_CUTLINE YES -srcnodata NoData -dstnodata -9999 -cutline ../08_shapefiles/mar_grid_diss.shp -crop_to_cutline $i ../01_input_geotiff/$i; done
+for i in `find *.tif`; do gdalwarp --config GDALWARP_IGNORE_BAD_CUTLINE YES -srcnodata NoData -dstnodata -9999 -cutline ../09_shapefiles/mar_grid_diss.shp -crop_to_cutline $i ../01_input_geotiff/$i; done
 ```
 
 Then rename all the GeoTIFF file using below code
@@ -129,9 +129,9 @@ If you have limited data connection or lazy to download +-7GB and process +-27GB
 
 ### 1.4. Convert GeoTIFFs to single netCDF
 
-Use below script to convert all GeoTIFF file in a folder into single netCDF file that is CF-Compliant.
+Use below script to convert all GeoTIFF file in a folder into single netCDF file that is [CF-Compliant](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html).
 
-``` python
+```python
 #!/usr/bin/env python
 """
 Convert CHIRPS GeoTIFF in a folder to single NetCDF file with time dimension enabled that is CF-Compliant
@@ -264,13 +264,41 @@ As explain in Step 1.1. Input requirement above, we need to check the variable a
 	ncdump -h mar_cli_chirps_monthly_1981_2023.nc
 	```
 
-* As you can see from the result, all the requirement is completed: unit is in `mm`, order dimension for each variables is `lat`, `lon`, `time`, and `time` dimension is in `UNLIMITED`. The dataset can be used as input to `climate-indices` package for computing SPI.
+* As you can see from the result, all the requirement is completed: unit is in `mm`, order dimension for each variables is `time`,`lat`, `lon`, and `time` dimension is in `UNLIMITED`. The dataset can be used as input to `climate-indices` package for computing SPI.
+
+	* Following last point in the section 1.1, you could consider to re-order the dimension into `lat`,`lon`,`time` as all the data will force following this order during SPI calculation by NCO module
+
+	* Let's re-order the variables into `lat`,`lon`,`time` using `ncpdq` command
+
+	```bash
+	ncpdq -a lat,lon,time mar_cli_chirps_monthly_1981_2023.nc mar_cli_chirps_monthly_1981_2023_temp1.nc
+	```
+
+	:::{note}
+    **Notes on re-ordering process (Case by case)**
+    
+    After re-ordering the variables, sometimes user experience `lat` or `lon` dimension becomes `UNLIMITED` which is wrong. The `time` dimension should be the `UNLIMITED` dimension.
+    
+    Fortunately you can do this to fix the `lat` or `lon` dimension who becomes `UNLIMITED` using `ncks` command below:
+    
+    ``` bash
+    ncks --fix_rec_dmn lat mar_cli_chirps_monthly_1981_2023_temp1.nc -o mar_cli_chirps_monthly_1981_2023_temp2.nc
+    ```
+    
+    And to make `UNLIMITED` the `time` dimension again using `ncks` command below:
+    
+    ``` bash
+    ncks --mk_rec_dmn time mar_cli_chirps_monthly_1981_2023_temp2.nc -o mar_cli_chirps_monthly_1981_2023_llt.nc
+    ```
+    
+    If you don't come accross the problem, `lat` or `lon` dimension becomes `UNLIMITED`, then skip above process and go directly to step below.
+	:::
 
 ## 2. Calculate SPI
 
 Let's start the calculation!
 
-* In your Terminal, run the following code to calculate SPI 1-month
+* In your Terminal, run the following code to calculate SPI 1-month (assume we will use file `mar_cli_chirps_monthly_1981_2023.nc` as input)
 
 	``` bash
 	process_climate_indices --index spi --periodicity monthly --scales 1 --calibration_start_year 1991 --calibration_end_year 2020 --netcdf_precip mar_cli_chirps_monthly_1981_2023.nc --var_name_precip precip --output_file_base ../03_intermediate_output_netcdf/mar_cli_chirps --multiprocessing all --save_params ../04_fitting/mar_cli_chirps_spi01_1991_2023_fitting.nc --overwrite
@@ -291,9 +319,9 @@ Let's start the calculation!
 
 * The above command will compute SPI (both gamma and Pearson Type III distributions) from monthly precipitation dataset, and the calibration period used will be Jan-1991 through Dec-2020. The index will be computed at `1-month` timescales. The output files will be <`out_dir>/mar_cli_chirps_spi_gamma_xx.nc`, and `<out_dir>/mar_cli_chirps_spi_pearson_xx.nc`.
 
-## 3. Re-order the dimension to follow the CF Convention
+## 3. Re-order the dimension (again) to follow the CF Convention
 
-SPI output generated by `climate-indices` has the dimension order `time`, `lat`, `lon` by default. Let's re-order the dimension into `time`,`lat`,`lon` using `ncpdq` command from NCO and save the result to folder `05_spi_output_netcdf`
+SPI output generated by `climate-indices` has the dimension order `lat`, `lon`, `time` by default. Let's re-order the dimension into `time`,`lat`,`lon` using `ncpdq` command from NCO and save the result to folder `05_spi_output_netcdf`
 
 ``` bash
 ncpdq -a time,lat,lon mar_cli_chirps_spi_gamma_1_month.nc ../05_spi_output_netcdf/mar_cli_chirps_spi_gamma_1_month.nc
@@ -344,4 +372,3 @@ Sometimes we need to have the data in different format like GeoTIFF for further 
 	```
 
 * Next, you can continue to translate other SPI files.
-
