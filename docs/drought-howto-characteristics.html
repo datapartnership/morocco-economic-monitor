@@ -1,0 +1,1192 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>How-to guide SPI-based drought characteristics &#8212; Morocco Economic Monitor Support</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/drought-howto-characteristics';</script>
+    <link rel="canonical" href="http://datapartnership.org/morocco-economic-monitor/docs/drought-howto-characteristics.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sample Indicators" href="sample-indicators.html" />
+    <link rel="prev" title="How-to guide SPI analysis" href="drought-howto-spianalysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Goods Overview and Foundational Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction_to_data_goods.html">Introduction to Data Goods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundational_datasets_and_data_products.html">Foundational Datasets and Data Products Summary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Products</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="drought-readme.html">Drought</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="drought-eo.html">Satellite-based monitoring of drought conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drought-howto-spianalysis.html">How-to guide SPI analysis</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How-to guide SPI-based drought characteristics</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sample Indicators and Insights</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sample-indicators.html">Sample Indicators</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="team.html">Data Goods Team and Acknowledgements</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/datapartnership/morocco-economic-monitor" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/datapartnership/morocco-economic-monitor/edit/main/docs/drought-howto-characteristics.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/datapartnership/morocco-economic-monitor/issues/new?title=Issue%20on%20page%20%2Fdocs/drought-howto-characteristics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/drought-howto-characteristics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How-to guide SPI-based drought characteristics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-event">Drought Event</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-inter-arrival-time">Drought Inter-arrival Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-magnitude">Drought Magnitude</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-duration">Drought Duration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-severity">Drought Severity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-classification">SPI Classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-to-csv">Convert to CSV</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-visualization">Map Visualization</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-guide-spi-based-drought-characteristics">
+<h1>How-to guide SPI-based drought characteristics<a class="headerlink" href="#how-to-guide-spi-based-drought-characteristics" title="Permalink to this heading">#</a></h1>
+<p>Drought characteristics at all grid were identified using calculated monthly SPI for the total period of 43 years (1981–2023). Drought is defined as the period in which SPI is continuously below a critical threshold (<code class="docutils literal notranslate"><span class="pre">-1.2</span></code>), respectively.</p>
+<p>For each category, we identified and analysed the following four main drought characteristics: <code class="docutils literal notranslate"><span class="pre">events</span></code> (E), <code class="docutils literal notranslate"><span class="pre">duration</span></code> (D), <code class="docutils literal notranslate"><span class="pre">inter-arrival</span> <span class="pre">time</span></code> (T), <code class="docutils literal notranslate"><span class="pre">magnitude</span></code> (M), and <code class="docutils literal notranslate"><span class="pre">severity</span></code> (S = M/D).</p>
+<ul class="simple">
+<li><p>Event: Month in which the SPEI is less than a threshold.</p></li>
+<li><p>Duration D: the number of consecutive months in which the SPEI is below the threshold.</p></li>
+<li><p>Inter-arrival T: the duration (month) between the initiation time of two successive drought events (regardless of the length) in the same drought category. It includes the drought and subsequent non-drought periods. Therefore, T characterizes the timing variability of drought events.</p></li>
+<li><p>Magnitude M: the absolute cumulative SPEI value during drought events. Unitless. (On Le’s paper, Magnitude are called as Severity)</p></li>
+<li><p>Severity S: the number came from magnitude divided by duration to get level of severity. Unitless. (According to attached picture, many papers also mixed up between last two variables, magnitude and severity and also intensity)</p></li>
+</ul>
+<section id="drought-event">
+<h2>Drought Event<a class="headerlink" href="#drought-event" title="Permalink to this heading">#</a></h2>
+<p>Here’s what this script does to calculate the drought event with threshold <code class="docutils literal notranslate"><span class="pre">SPI</span> <span class="pre">&lt;-1.2</span></code>:</p>
+<ul class="simple">
+<li><p>It opens your SPI dataset using <code class="docutils literal notranslate"><span class="pre">xr.open_dataset</span></code>.</p></li>
+<li><p>It calculates the drought event by checking if the SPI value is less than <code class="docutils literal notranslate"><span class="pre">-1.2</span></code>. If it is, it assigns a value of <code class="docutils literal notranslate"><span class="pre">1</span></code>; otherwise, it assigns a value of <code class="docutils literal notranslate"><span class="pre">0</span></code>. The calculation is performed using <code class="docutils literal notranslate"><span class="pre">xr.where</span></code>.</p></li>
+<li><p>Finally, it saves the dataset, which now includes the new drought event variable, to a new netCDF file using <code class="docutils literal notranslate"><span class="pre">to_netcdf</span></code>.</p></li>
+</ul>
+<p>This script assumes that the SPI variable is named <code class="docutils literal notranslate"><span class="pre">spi_gamma_x_month</span></code> in the netCDF file. Please modify the script as necessary based on your specific data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Open the SPI dataset</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/05_spi_output_netcdf/mar_cli_chirps_spi_gamma_6_month.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define a drought event as an SPI value less than -1.2</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;spi_gamma_6_month&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">1.2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;spi_gamma_6_month&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Transpose to the original dimensions</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">)</span>
+
+<span class="c1"># Save the new drought event variable to a new netCDF file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_event.nc&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Completed!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="drought-inter-arrival-time">
+<h2>Drought Inter-arrival Time<a class="headerlink" href="#drought-inter-arrival-time" title="Permalink to this heading">#</a></h2>
+<p>This script performs the following steps to calculate the drought inter-arrival time:</p>
+<ol class="arabic simple">
+<li><p>The script opens your drought event dataset using <code class="docutils literal notranslate"><span class="pre">xr.open_dataset</span></code>.</p></li>
+<li><p>It extracts the ‘drought_event’ variable from your dataset.</p></li>
+<li><p>The script then defines a function to compute inter-arrival times for a time series. This function works as follows:</p>
+<ul class="simple">
+<li><p>It identifies where drought events occur in the time series by finding where the time series value equals 1, using the <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function.</p></li>
+<li><p>It calculates the differences between successive events using the <code class="docutils literal notranslate"><span class="pre">np.diff</span></code> function, which gives the inter-arrival times.</p></li>
+<li><p>It creates a new time series for inter-arrival times that is the same shape as the input and is initially filled with NaN values, using the <code class="docutils literal notranslate"><span class="pre">np.full_like</span></code> function.</p></li>
+<li><p>The computed inter-arrival times are then assigned to the indices following the start of each event in the new time series. The first event is skipped because there’s no previous event to measure an inter-arrival time from.</p></li>
+</ul>
+</li>
+<li><p>This function is applied to each time series in the ‘drought_event’ variable, grouping by latitude and longitude so that each time series is processed independently. The <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method is used to achieve this. This results in a new DataArray of inter-arrival times.</p></li>
+<li><p>This new DataArray is added to the original Dataset as a new variable ‘interarrival_times’.</p></li>
+<li><p>The updated Dataset, which now includes the new ‘interarrival_times’ variable, is then saved to a new netCDF file using the <code class="docutils literal notranslate"><span class="pre">to_netcdf</span></code> method.</p></li>
+<li><p>Finally, it closes the original dataset file to free up system resources.</p></li>
+</ol>
+<p>This script assumes that the ‘drought_event’ variable is stored in the netCDF file and each grid cell’s time series is processed independently from the others. Please adjust the script as necessary based on your specific data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Open the SPI dataset</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_event.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Transpose the dataset to respect original dimensions</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">)</span>
+
+<span class="c1"># Convert to a multi-indexed DataFrame</span>
+<span class="n">df_drought</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+
+<span class="c1"># Reset the index to put &#39;lat&#39; and &#39;lon&#39; into columns</span>
+<span class="n">df_drought</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Handle missing values: if drought_event is NaN, fill with previous value</span>
+<span class="n">df_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_drought</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span>
+
+<span class="c1"># Get the drought_event column</span>
+<span class="n">drought_events</span> <span class="o">=</span> <span class="n">df_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span>
+
+<span class="c1"># Function to compute interarrival times for a time series</span>
+<span class="k">def</span> <span class="nf">compute_interarrival_times</span><span class="p">(</span><span class="n">time_series</span><span class="p">):</span>
+    <span class="c1"># For the first date, use the value from the drought event</span>
+    <span class="n">interarrival_time_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">time_series</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">time_series</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">interarrival_time_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="c1"># Get the indices where time_series represents a drought event (where time_series is 1)</span>
+    <span class="n">event_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">time_series</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Calculate the differences between successive events</span>
+    <span class="n">interarrival_times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">event_indices</span><span class="p">)</span>
+
+    <span class="c1"># Assign the computed interarrival times to the indices following the start of each event</span>
+    <span class="c1"># Skip the first event (because there&#39;s no previous event to measure an interarrival time from)</span>
+    <span class="n">interarrival_time_series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">event_indices</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span> <span class="o">=</span> <span class="n">interarrival_times</span>
+
+    <span class="k">return</span> <span class="n">interarrival_time_series</span>
+
+<span class="c1"># Apply the function to each (&#39;lat&#39;, &#39;lon&#39;) group</span>
+<span class="n">df_drought</span><span class="p">[</span><span class="s1">&#39;interarrival_times&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_drought</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">compute_interarrival_times</span><span class="p">)</span>
+
+<span class="c1"># Convert the DataFrame back to an xarray Dataset</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">df_drought</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">()</span>
+
+<span class="c1"># Save the new drought interarrival times variable to a new netCDF file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_interarrival_times.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Close the original file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Completed!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="drought-magnitude">
+<h2>Drought Magnitude<a class="headerlink" href="#drought-magnitude" title="Permalink to this heading">#</a></h2>
+<p>Here’s what the script does to calculate the drought magnitude:</p>
+<ol class="arabic simple">
+<li><p>Opens your drought event dataset and the SPI data using <code class="docutils literal notranslate"><span class="pre">xr.open_dataset</span></code>.</p></li>
+<li><p>Creates a new variable ‘drought_magnitude’ by copying the values from the ‘drought_event’ variable in your dataset.</p></li>
+<li><p>Iterates through the time points in your dataset, starting from the second time point. For each time point, the script performs the following operations:</p>
+<ul class="simple">
+<li><p>Checks if a drought event is occurring at that time point by extracting the ‘drought_event’ value using the <code class="docutils literal notranslate"><span class="pre">isel</span></code> method.</p></li>
+<li><p>Retrieves the SPI value at that time point using the <code class="docutils literal notranslate"><span class="pre">isel</span></code> method.</p></li>
+<li><p>Retrieves the drought magnitude value at the previous time point using the <code class="docutils literal notranslate"><span class="pre">isel</span></code> method.</p></li>
+<li><p>Calculates the drought magnitude at the current time point. If a drought event is happening (i.e., drought_event is True), the drought magnitude is calculated as the absolute value of the SPI at that time point plus the drought magnitude at the previous time point. If no drought event is occurring, the existing value for drought magnitude at that time point (originally copied from ‘drought_event’) is retained. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method is used to apply this conditional calculation.</p></li>
+</ul>
+</li>
+<li><p>Saves the dataset, which now includes the new ‘drought_magnitude’ variable, to a new netCDF file using the <code class="docutils literal notranslate"><span class="pre">to_netcdf</span></code> method.</p></li>
+<li><p>Closes the original dataset file to free up system resources.</p></li>
+</ol>
+<p>This script assumes that the ‘drought_event’ variable and the SPI data (‘spi_gamma_12_month’) are stored in the same netCDF file. Please adjust the script as necessary based on your specific data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Open the drought event and spi data</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_interarrival_times.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Transpose the dataset to respect original dimensions</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">)</span>
+
+<span class="c1"># Preallocate an empty array for drought_magnitude and set all to NaN</span>
+<span class="n">drought_magnitude_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">drought_magnitude_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="c1"># Find the first time step where not all spi_gamma_3_month values are NaN</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ds_drought</span><span class="o">.</span><span class="n">time</span><span class="p">))</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;spi_gamma_6_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+
+<span class="c1"># Start from the determined time step</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds_drought</span><span class="o">.</span><span class="n">time</span><span class="p">)):</span>
+    <span class="c1"># For each point, check if it&#39;s a drought event</span>
+    <span class="n">drought_event</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">spi_value</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;spi_gamma_6_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">prev_drought_magnitude</span> <span class="o">=</span> <span class="n">drought_magnitude_arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Calculate drought magnitude based on your conditions</span>
+    <span class="n">drought_magnitude_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">drought_event</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">spi_value</span><span class="p">)</span> <span class="o">+</span> <span class="n">prev_drought_magnitude</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Assign the calculated values to the drought_magnitude in the dataset</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_magnitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">),</span> <span class="n">drought_magnitude_arr</span><span class="p">)</span>
+
+<span class="c1"># Save the new drought magnitude variable to a new netCDF file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_magnitude.nc&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># Plot maximum drought magnitude at each time step</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_magnitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Maximum Drought Magnitude Over Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Drought Magnitude&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Close the original file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Completed!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Above script will also generate a chart on the Maximum Drought Magnitude Over Time</p>
+<p><img alt="DM" src="../_images/drought-magnitude-overtime.png" /></p>
+</section>
+<section id="drought-duration">
+<h2>Drought Duration<a class="headerlink" href="#drought-duration" title="Permalink to this heading">#</a></h2>
+<p>Here’s what the updated script does to calculate the drought duration:</p>
+<ol class="arabic simple">
+<li><p>Opens your drought event dataset using <code class="docutils literal notranslate"><span class="pre">xr.open_dataset</span></code>.</p></li>
+<li><p>Creates a new variable ‘drought_duration’ filled with NaN (Not a Number) values but of the same shape as the ‘drought_event’ variable in your dataset using <code class="docutils literal notranslate"><span class="pre">xr.full_like</span></code>.</p></li>
+<li><p>For the first “time” data, it checks if ‘drought_event’ is finite (not NaN) and assigns the ‘drought_event’ value to ‘drought_duration’ if it is finite. The <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function is used for this conditional assignment.</p></li>
+<li><p>Then it starts iterating over the time points in your dataset, beginning from the second time point. For each time point, the script performs the following operations:</p>
+<ul class="simple">
+<li><p>Checks if a drought event is occurring at that time point by extracting the ‘drought_event’ value using the <code class="docutils literal notranslate"><span class="pre">isel</span></code> method.</p></li>
+<li><p>Retrieves the drought duration value at the previous time point using the <code class="docutils literal notranslate"><span class="pre">isel</span></code> method.</p></li>
+<li><p>Computes a mask for finite values in ‘drought_event’ using <code class="docutils literal notranslate"><span class="pre">np.isfinite</span></code>.</p></li>
+<li><p>If a drought event is happening (i.e., ‘drought_event’ is 1), the drought duration at the current time point is calculated as the drought duration at the previous time point plus one. If no drought event is occurring, the drought duration at the current time point is set to 0. If ‘drought_event’ is NaN, ‘drought_duration’ is kept as NaN. The <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function is used for this triple conditional calculation.</p></li>
+</ul>
+</li>
+<li><p>Saves the dataset, which now includes the new ‘drought_duration’ variable, to a new netCDF file using the <code class="docutils literal notranslate"><span class="pre">to_netcdf</span></code> method.</p></li>
+<li><p>Finally, it closes the original dataset file to free up system resources.</p></li>
+</ol>
+<p>This script assumes that the ‘drought_event’ variable is stored in the netCDF file. Please adjust the script as necessary based on your specific data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Open the drought event and spi data</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_magnitude.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Transpose the dataset to respect original dimensions</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">)</span>
+
+<span class="c1"># Preallocate an empty array for drought_duration and set all to NaN</span>
+<span class="n">drought_duration_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">drought_duration_arr</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="c1"># Find the first time step where not all spi_gamma_12_month values are NaN</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ds_drought</span><span class="o">.</span><span class="n">time</span><span class="p">))</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;spi_gamma_6_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">())</span>
+
+<span class="c1"># Start from the determined time step</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds_drought</span><span class="o">.</span><span class="n">time</span><span class="p">)):</span>
+    <span class="c1"># For each point, check if it&#39;s a drought event</span>
+    <span class="n">drought_event</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">prev_drought_duration</span> <span class="o">=</span> <span class="n">drought_duration_arr</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1"># Calculate drought duration based on your conditions</span>
+    <span class="n">drought_duration_arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">drought_event</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">prev_drought_duration</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Assign the calculated values to the drought_duration in the dataset</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">),</span> <span class="n">drought_duration_arr</span><span class="p">)</span>
+
+<span class="c1"># Save the new drought duration variable to a new netCDF file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_duration.nc&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># Plot maximum drought duration at each time step</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Maximum Drought Duration Over Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Drought Duration&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Close the original file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Completed!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Above script will also generate a chart on the Maximum Drought Duration Over Time</p>
+<p><img alt="DD" src="../_images/drought-duration-overtime.png" /></p>
+</section>
+<section id="drought-severity">
+<h2>Drought Severity<a class="headerlink" href="#drought-severity" title="Permalink to this heading">#</a></h2>
+<p>This script performs the following steps to calculate the drought severity:</p>
+<ol class="arabic simple">
+<li><p>The script opens your drought event dataset using <code class="docutils literal notranslate"><span class="pre">xr.open_dataset</span></code>.</p></li>
+<li><p>It creates a new variable ‘drought_duration’ with NaN (Not a Number) values of the same shape as the ‘drought_event’ variable in your dataset using <code class="docutils literal notranslate"><span class="pre">xr.full_like</span></code>.</p></li>
+<li><p>For the first “time” data, the script checks if ‘drought_event’ is finite (not NaN) and assigns the ‘drought_event’ value to ‘drought_duration’ if it is finite, using the <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function for conditional assignment.</p></li>
+<li><p>The script starts iterating over the time points in your dataset, beginning from the second time point. For each time point, it:</p>
+<ul class="simple">
+<li><p>Checks if a drought event is occurring at that time point by extracting the ‘drought_event’ value using <code class="docutils literal notranslate"><span class="pre">isel</span></code>.</p></li>
+<li><p>Retrieves the drought duration value at the previous time point using <code class="docutils literal notranslate"><span class="pre">isel</span></code>.</p></li>
+<li><p>Computes a mask for finite values in ‘drought_event’ using <code class="docutils literal notranslate"><span class="pre">np.isfinite</span></code>.</p></li>
+<li><p>If a drought event is happening (i.e., ‘drought_event’ is 1), the drought duration at the current time point is calculated as the drought duration at the previous time point plus one. If no drought event is occurring, the drought duration at the current time point is set to 0. If ‘drought_event’ is NaN, ‘drought_duration’ is kept as NaN. The <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function is used for this triple conditional calculation.</p></li>
+</ul>
+</li>
+<li><p>It then calculates the drought severity. First, it creates a new variable ‘drought_severity’ filled with NaN values but with the same shape as the ‘drought_event’ variable. Then, it computes a mask for non-zero and finite values in both ‘drought_magnitude’ and ‘drought_duration’. Finally, for the masked values, it calculates the drought severity as the ratio of ‘drought_magnitude’ to ‘drought_duration’ using the <code class="docutils literal notranslate"><span class="pre">np.where</span></code> function for conditional assignment.</p></li>
+<li><p>It saves the dataset, which now includes the new ‘drought_severity’ variable, to a new netCDF file using the <code class="docutils literal notranslate"><span class="pre">to_netcdf</span></code> method.</p></li>
+<li><p>Finally, it closes the original dataset file to free up system resources.</p></li>
+</ol>
+<p>This script assumes that the ‘drought_event’ and ‘drought_magnitude’ variables are stored in the netCDF file. Please adjust the script as necessary based on your specific data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Open the drought event and spi data</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_duration.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Transpose the dataset to have &#39;time&#39;, &#39;lat&#39;, &#39;lon&#39; order</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">)</span>
+
+<span class="c1"># Compute the drought_severity</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_severity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">drought_duration</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_duration&#39;</span><span class="p">]</span>
+<span class="n">drought_magnitude</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_magnitude&#39;</span><span class="p">]</span>
+
+<span class="c1"># Compute mask for non-zero and finite values</span>
+<span class="n">is_finite_and_nonzero</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">drought_magnitude</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">drought_magnitude</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span>
+                         <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">drought_duration</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">drought_duration</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">))</span>
+
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_severity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">is_finite_and_nonzero</span><span class="p">,</span> 
+                                                 <span class="n">drought_magnitude</span> <span class="o">/</span> <span class="n">drought_duration</span><span class="p">,</span> 
+                                                 <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1"># Save the new drought duration variable to a new netCDF file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_severity.nc&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1"># Plot mean drought severity at each time step</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_severity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean Drought Severity Over Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Drought Severity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Close the original file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Completed!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Above script will also generate a chart on the Mean Drought Severity Over Time</p>
+<p><img alt="DS" src="../_images/drought-severity-overtime.png" /></p>
+</section>
+<section id="spi-classification">
+<h2>SPI Classification<a class="headerlink" href="#spi-classification" title="Permalink to this heading">#</a></h2>
+<p>Classify the SPI value using column threshold below and asssigned a text value based on Class column, then save it as CSV file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="c1"># Ignore warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load the point shapefile</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/09_shapefiles/mar_grid_005_p.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># Extract the x and y coordinates of each point in gdf and round them</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+
+<span class="c1"># Open the netCDF file</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_severity.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define the classification bins and labels</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="o">-</span><span class="mf">2.00</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.50</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.20</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.70</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.70</span><span class="p">,</span> <span class="mf">1.20</span><span class="p">,</span> <span class="mf">1.50</span><span class="p">,</span> <span class="mf">2.00</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Exceptionally Dry&#39;</span><span class="p">,</span> <span class="s1">&#39;Extremely Dry&#39;</span><span class="p">,</span> <span class="s1">&#39;Severely Dry&#39;</span><span class="p">,</span> <span class="s1">&#39;Moderately Dry&#39;</span><span class="p">,</span> <span class="s1">&#39;Abnormally Dry&#39;</span><span class="p">,</span> <span class="s1">&#39;Near Normal&#39;</span><span class="p">,</span> 
+          <span class="s1">&#39;Abnormally Moist&#39;</span><span class="p">,</span> <span class="s1">&#39;Moderately Moist&#39;</span><span class="p">,</span> <span class="s1">&#39;Very Moist&#39;</span><span class="p">,</span> <span class="s1">&#39;Extremely Moist&#39;</span><span class="p">,</span> <span class="s1">&#39;Exceptionally Moist&#39;</span><span class="p">]</span>
+
+<span class="c1"># Convert the DataArray for &quot;spi_gamma_12_month&quot; to a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;spi_gamma_6_month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Pivot the DataFrame to have dates as columns</span>
+<span class="n">df_pivot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;spi_gamma_6_month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Convert the time columns to yyyymmdd format</span>
+<span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">col</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="c1"># Classify &quot;spi_gamma_12_month&quot;</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">column</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">]:</span>
+        <span class="n">df_pivot</span><span class="p">[</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">df_pivot</span><span class="p">[</span><span class="n">column</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="c1"># Convert the DataFrame to a GeoDataFrame, with Point geometries</span>
+<span class="n">gdf_pivot</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df_pivot</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df_pivot</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">df_pivot</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+
+<span class="c1"># Extract the x and y coordinates of each point in gdf_pivot and round them</span>
+<span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_pivot</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_pivot</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+
+<span class="c1"># Set the CRS of the GeoDataFrame to match the shapefile</span>
+<span class="n">gdf_pivot</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s2">&quot;EPSG:4326&quot;</span>
+
+<span class="c1"># Spatial join between the points and the GeoDataFrame</span>
+<span class="n">gdf_joined</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">gdf_pivot</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="s1">&#39;intersects&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+<span class="c1"># Drop unnecessary columns</span>
+<span class="n">gdf_joined</span> <span class="o">=</span> <span class="n">gdf_joined</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_left&#39;</span><span class="p">,</span> <span class="s1">&#39;y_left&#39;</span><span class="p">,</span> <span class="s1">&#39;index_right&#39;</span><span class="p">,</span> <span class="s1">&#39;x_right&#39;</span><span class="p">,</span> <span class="s1">&#39;y_right&#39;</span><span class="p">])</span>
+
+<span class="c1"># Save the DataFrame to a CSV file</span>
+<span class="n">gdf_joined</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../SPI/mar/08_tabular/mar_cli_spi06_classification.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Close the original file</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CSV file has been created.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="convert-to-csv">
+<h2>Convert to CSV<a class="headerlink" href="#convert-to-csv" title="Permalink to this heading">#</a></h2>
+<p>Convert all variables into csv and spatially join with the point grid from the admin2 level boundary. As the final CSV output will be the variable along with information on the admin level.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="c1"># Ignore warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load the point shapefile</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/09_shapefiles/mar_grid_005_p.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># Extract the x and y coordinates of each point in gdf and round them</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+
+<span class="c1"># Open the netCDF file</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_severity.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># List of variables to convert to csv</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;spi_gamma_6_month&quot;</span><span class="p">,</span> <span class="s2">&quot;drought_event&quot;</span><span class="p">,</span> <span class="s2">&quot;interarrival_times&quot;</span><span class="p">,</span> <span class="s2">&quot;drought_magnitude&quot;</span><span class="p">,</span> <span class="s2">&quot;drought_duration&quot;</span><span class="p">,</span> <span class="s2">&quot;drought_severity&quot;</span><span class="p">]</span>
+
+<span class="c1"># Iterate over each variable</span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">variables</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;Converting variables&#39;</span><span class="p">):</span>
+    <span class="c1"># Convert the DataArray to a DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    
+    <span class="c1"># Pivot the DataFrame to have dates as columns</span>
+    <span class="n">df_pivot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">var</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    
+    <span class="c1"># Convert the time columns to yyyymmdd format</span>
+    <span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">col</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_pivot</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+    
+    <span class="c1"># Convert the DataFrame to a GeoDataFrame, with Point geometries</span>
+    <span class="n">gdf_pivot</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df_pivot</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df_pivot</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">df_pivot</span><span class="o">.</span><span class="n">lat</span><span class="p">))</span>
+
+    <span class="c1"># Extract the x and y coordinates of each point in gdf_pivot and round them</span>
+    <span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_pivot</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_pivot</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">gdf_pivot</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Set the CRS of the GeoDataFrame to match the shapefile</span>
+    <span class="n">gdf_pivot</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s2">&quot;EPSG:4326&quot;</span>
+    
+    <span class="c1"># Spatial join between the points and the GeoDataFrame</span>
+    <span class="n">gdf_joined</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">sjoin</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">gdf_pivot</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="s1">&#39;intersects&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Drop unnecessary columns</span>
+    <span class="n">gdf_joined</span> <span class="o">=</span> <span class="n">gdf_joined</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_left&#39;</span><span class="p">,</span> <span class="s1">&#39;y_left&#39;</span><span class="p">,</span> <span class="s1">&#39;index_right&#39;</span><span class="p">,</span> <span class="s1">&#39;x_right&#39;</span><span class="p">,</span> <span class="s1">&#39;y_right&#39;</span><span class="p">])</span>
+
+    <span class="c1"># Save the DataFrame to a CSV file</span>
+    <span class="n">gdf_joined</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;../SPI/mar/08_tabular/mar_cli_spi06_</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+<span class="c1"># Close the original file</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CSV files have been created.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="map-visualization">
+<h2>Map Visualization<a class="headerlink" href="#map-visualization" title="Permalink to this heading">#</a></h2>
+<p>Visual interpretation of each variable on a map</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+
+<span class="c1"># Open the dataset</span>
+<span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_severity.nc&#39;</span><span class="p">)</span>
+
+<span class="c1"># Resample to yearly frequency, summing over all months in each year</span>
+<span class="n">ds_yearly</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+<span class="c1"># Compute the average number of events per year, excluding NaN and zero values</span>
+<span class="n">num_events</span> <span class="o">=</span> <span class="n">ds_yearly</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds_yearly</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Compute the other statistics</span>
+<span class="n">total_count</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">frequency</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_count</span>
+<span class="n">max_magnitude</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_magnitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">max_duration</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">mean_severity</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_severity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># List of the computed statistics and their titles</span>
+<span class="n">statistics</span> <span class="o">=</span> <span class="p">[</span><span class="n">num_events</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">max_magnitude</span><span class="p">,</span> <span class="n">max_duration</span><span class="p">,</span> <span class="n">mean_severity</span><span class="p">]</span>
+<span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Average of Drought Event per Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Drought Frequency (Jan 1981 - May 2023)&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;Maximum of Drought Magnitude (Jan 1981 - May 2023)&quot;</span><span class="p">,</span> <span class="s2">&quot;Maximum of Drought Duration (Jan 1981 - May 2023)&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;Mean of Drought Severity (Jan 1981 - May 2023)&quot;</span><span class="p">]</span>
+<span class="n">colorbars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Events/Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Frequency&quot;</span><span class="p">,</span> <span class="s2">&quot;Magnitude&quot;</span><span class="p">,</span> <span class="s2">&quot;Duration (Month)&quot;</span><span class="p">,</span> <span class="s2">&quot;Severity&quot;</span><span class="p">]</span>
+<span class="n">cmaps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">]</span>
+
+<span class="c1"># Read the shapefile</span>
+<span class="n">shapefile</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/09_shapefiles/WB_GAD_ADM0_and_Disputes.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define a function to add administration boundaries with specific colors</span>
+<span class="k">def</span> <span class="nf">add_admin_boundaries</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+    <span class="c1"># Loop through each row in the shapefile dataframe</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">shapefile</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;NAM_0&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Morocco&quot;</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+        <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;NAM_0&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Western Sahara&quot;</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span>
+        
+        <span class="c1"># Add the feature with the specified color</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">ShapelyFeature</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="n">facecolor</span><span class="p">))</span>
+
+<span class="c1"># Define the extent of your map for Morocco</span>
+<span class="n">lon_min</span><span class="p">,</span> <span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">,</span> <span class="n">lat_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">37</span>
+
+<span class="c1"># Create a figure with subplots arranged in 2 rows and 3 columns</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
+<span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>  <span class="c1"># Flatten the axes array for easy looping</span>
+
+<span class="c1"># Set colorbar size</span>
+<span class="n">cbar_kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fraction&#39;</span><span class="p">:</span> <span class="mf">0.046</span><span class="p">,</span> <span class="s1">&#39;pad&#39;</span><span class="p">:</span> <span class="mf">0.04</span><span class="p">}</span>
+
+<span class="c1"># Loop over the subplots to create each map</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">stat</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">cbar_title</span><span class="p">,</span> <span class="n">cmap</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">statistics</span><span class="p">,</span> <span class="n">titles</span><span class="p">,</span> <span class="n">colorbars</span><span class="p">,</span> <span class="n">cmaps</span><span class="p">)):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lon_min</span><span class="p">,</span> <span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+    <span class="n">stat</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">stat</span><span class="p">))</span>  <span class="c1"># Add this line to mask NaN values</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>  <span class="c1"># Plot without colorbar first</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">cbar_title</span><span class="p">,</span> <span class="o">**</span><span class="n">cbar_kwargs</span><span class="p">)</span>  <span class="c1"># Then add colorbar with label</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>  <span class="c1"># Set title with increased font size</span>
+    <span class="n">add_admin_boundaries</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">top_labels</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">gl</span><span class="o">.</span><span class="n">right_labels</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Remove the last subplot if it&#39;s not used</span>
+<span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">axs</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># Automatically adjust subplot parameters to give specified padding</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># Adjust the space between rows</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+
+<span class="c1"># Add the main title and save the chart</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Drought characteristics based on SPI 6-month&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.03</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;../SPI/mar/10_images/mar_cli_spi06_drought_characteristics_chirps.png&quot;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Close the original file</span>
+<span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Above script will generate a map on the Drought characteristics based on SPI 6-month</p>
+<p><img alt="SPI06-DR" src="../_images/mar_cli_spi06_drought_characteristics_chirps.png" /></p>
+<p>We can also produce another visualisation which combine different time scale.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;../SPI/mar/07_drought_variable/mar_cli_spi03_drought_severity.nc&quot;</span><span class="p">,</span> 
+         <span class="s2">&quot;../SPI/mar/07_drought_variable/mar_cli_spi06_drought_severity.nc&quot;</span><span class="p">,</span> 
+         <span class="s2">&quot;../SPI/mar/07_drought_variable/mar_cli_spi12_drought_severity.nc&quot;</span><span class="p">]</span>
+
+<span class="c1"># Titles for each column</span>
+<span class="n">column_titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SPI 3-month&quot;</span><span class="p">,</span> <span class="s2">&quot;SPI 6-month&quot;</span><span class="p">,</span> <span class="s2">&quot;SPI 12-month&quot;</span><span class="p">]</span>
+
+<span class="c1"># Read the shapefile</span>
+<span class="n">shapefile</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/09_shapefiles/WB_GAD_ADM0_and_Disputes.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define the extent of your map for Morocco</span>
+<span class="n">lon_min</span><span class="p">,</span> <span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">,</span> <span class="n">lat_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">37</span>
+
+<span class="c1"># Adjust the cbar_kwargs</span>
+<span class="n">cbar_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;fraction&#39;</span><span class="p">:</span> <span class="mf">0.046</span><span class="p">,</span>
+    <span class="s1">&#39;pad&#39;</span><span class="p">:</span> <span class="mf">0.15</span><span class="p">,</span>  <span class="c1"># Increase the padding to move the colorbar down.</span>
+    <span class="s1">&#39;orientation&#39;</span><span class="p">:</span> <span class="s1">&#39;horizontal&#39;</span>
+<span class="p">}</span>
+
+<span class="n">titles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Average of Drought Event per Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Drought Frequency&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;Maximum of Drought Magnitude&quot;</span><span class="p">,</span> <span class="s2">&quot;Maximum of Drought Duration&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;Mean of Drought Severity&quot;</span><span class="p">]</span>
+<span class="n">colorbars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Events/Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Frequency&quot;</span><span class="p">,</span> <span class="s2">&quot;Magnitude&quot;</span><span class="p">,</span> <span class="s2">&quot;Duration (Month)&quot;</span><span class="p">,</span> <span class="s2">&quot;Severity&quot;</span><span class="p">]</span>
+<span class="n">cmaps</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">,</span> <span class="s1">&#39;hot_r&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a figure with subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
+
+<span class="c1"># Function to compute the statistics</span>
+<span class="k">def</span> <span class="nf">compute_statistics</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">):</span>
+    <span class="n">ds_yearly</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;1Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">num_events</span> <span class="o">=</span> <span class="n">ds_yearly</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds_yearly</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">total_count</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">frequency</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_event&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">total_count</span>
+    <span class="n">max_magnitude</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_magnitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">max_duration</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_duration&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">mean_severity</span> <span class="o">=</span> <span class="n">ds_drought</span><span class="p">[</span><span class="s1">&#39;drought_severity&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">num_events</span><span class="p">,</span> <span class="n">frequency</span><span class="p">,</span> <span class="n">max_magnitude</span><span class="p">,</span> <span class="n">max_duration</span><span class="p">,</span> <span class="n">mean_severity</span><span class="p">]</span>
+
+<span class="c1"># Define a function to add administration boundaries with specific colors</span>
+<span class="k">def</span> <span class="nf">add_admin_boundaries</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">shapefile</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;NAM_0&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Morocco&quot;</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
+        <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;NAM_0&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Western Sahara&quot;</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">facecolor</span> <span class="o">=</span> <span class="s1">&#39;gray&#39;</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">ShapelyFeature</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="n">facecolor</span><span class="p">))</span>
+
+<span class="c1"># Pre-calculate the global minimum and maximum for each statistic</span>
+<span class="n">global_mins</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">5</span>  <span class="c1"># Initialize with very large numbers</span>
+<span class="n">global_maxs</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">)]</span> <span class="o">*</span> <span class="mi">5</span>  <span class="c1"># Initialize with very small numbers</span>
+
+<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">compute_statistics</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">stat</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">stats</span><span class="p">):</span>
+        <span class="n">global_mins</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">global_mins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stat</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">global_maxs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">global_maxs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">stat</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+    <span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Now, plot with consistent color ranges per row</span>
+<span class="k">for</span> <span class="n">col</span><span class="p">,</span> <span class="n">file</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">files</span><span class="p">):</span>
+    <span class="n">ds_drought</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">compute_statistics</span><span class="p">(</span><span class="n">ds_drought</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">cbar_title</span><span class="p">,</span> <span class="n">cmap</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">stats</span><span class="p">,</span> <span class="n">titles</span><span class="p">,</span> <span class="n">colorbars</span><span class="p">,</span> <span class="n">cmaps</span><span class="p">)):</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="n">lon_min</span><span class="p">,</span> <span class="n">lon_max</span><span class="p">,</span> <span class="n">lat_min</span><span class="p">,</span> <span class="n">lat_max</span><span class="p">],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+        <span class="n">im</span> <span class="o">=</span> <span class="n">stat</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span> <span class="n">add_colorbar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">global_mins</span><span class="p">[</span><span class="n">row</span><span class="p">],</span> <span class="n">vmax</span><span class="o">=</span><span class="n">global_maxs</span><span class="p">[</span><span class="n">row</span><span class="p">])</span>
+        <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">cbar_title</span><span class="p">,</span> <span class="o">**</span><span class="n">cbar_kwargs</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+        <span class="n">add_admin_boundaries</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+        <span class="n">gl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span> <span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+        <span class="n">gl</span><span class="o">.</span><span class="n">top_labels</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">gl</span><span class="o">.</span><span class="n">right_labels</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># Add column titles to indicate the SPI scale above the existing titles</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">column_titles</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">),</span> <span class="n">xycoords</span><span class="o">=</span><span class="s1">&#39;axes fraction&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+    <span class="n">ds_drought</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Automatically adjust subplot parameters to give specified padding</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>  <span class="c1"># Adjusted spacing between subplots</span>
+
+<span class="c1"># Add the main title at top of image</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Morocco Drought Characteristics, 1981-2023&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.04</span><span class="p">)</span>
+
+<span class="c1"># Save and show the plot</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;../SPI/mar/10_images/mar_cli_spi_drought_characteristics_chirps.png&quot;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Above script will generate a map on the Drought characteristics based on various SPI time scale</p>
+<p><img alt="SPI-DR" src="../_images/mar_cli_spi_drought_characteristics_chirps.png" /></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="drought-howto-spianalysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How-to guide SPI analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="sample-indicators.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sample Indicators</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-event">Drought Event</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-inter-arrival-time">Drought Inter-arrival Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-magnitude">Drought Magnitude</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-duration">Drought Duration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drought-severity">Drought Severity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spi-classification">SPI Classification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-to-csv">Convert to CSV</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#map-visualization">Map Visualization</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By World Bank
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Jul 26, 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+    <b>All content (unless otherwise specified) is subject to the <a href="https://raw.githubusercontent.com/worldbank/template/main/LICENSE">World Bank Master Community License Agreement.</a></b>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

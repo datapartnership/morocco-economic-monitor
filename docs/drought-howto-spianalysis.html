@@ -1,0 +1,884 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>How-to guide SPI analysis &#8212; Morocco Economic Monitor Support</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/drought-howto-spianalysis';</script>
+    <link rel="canonical" href="http://datapartnership.org/morocco-economic-monitor/docs/drought-howto-spianalysis.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="How-to guide SPI-based drought characteristics" href="drought-howto-characteristics.html" />
+    <link rel="prev" title="Satellite-based monitoring of drought conditions" href="drought-eo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Goods Overview and Foundational Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction_to_data_goods.html">Introduction to Data Goods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundational_datasets_and_data_products.html">Foundational Datasets and Data Products Summary</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Products</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="drought-readme.html">Drought</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="drought-eo.html">Satellite-based monitoring of drought conditions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How-to guide SPI analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drought-howto-characteristics.html">How-to guide SPI-based drought characteristics</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sample Indicators and Insights</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="sample-indicators.html">Sample Indicators</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acknowledgements</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="team.html">Data Goods Team and Acknowledgements</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/datapartnership/morocco-economic-monitor" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/datapartnership/morocco-economic-monitor/edit/main/docs/drought-howto-spianalysis.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/datapartnership/morocco-economic-monitor/issues/new?title=Issue%20on%20page%20%2Fdocs/drought-howto-spianalysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/docs/drought-howto-spianalysis.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>How-to guide SPI analysis</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directory">0. Working Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-input-for-spi">1. Preparing input for SPI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-requirement">1.1. Input requirement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-chirps-data">1.2. Download CHIRPS data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clip-data-using-a-shapefile-based-on-area-of-interest">1.3. Clip data using a shapefile based on area of interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-geotiffs-to-single-netcdf">1.4. Convert GeoTIFFs to single netCDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-variable-and-attribute">1.5. Check variable and attribute</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-spi">2. Calculate SPI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-order-the-dimension-again-to-follow-the-cf-convention">3. Re-order the dimension (again) to follow the CF Convention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-result-using-panoply">4. Visualize the result using Panoply</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-the-result-to-geotiff">5. Convert the result to GeoTIFF</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-guide-spi-analysis">
+<h1>How-to guide SPI analysis<a class="headerlink" href="#how-to-guide-spi-analysis" title="Permalink to this heading">#</a></h1>
+<p>In this section provide information on how to access and download satellite precipitation estimates data, and use it to calculate SPI on defined time scales.</p>
+<section id="working-directory">
+<h2>0. Working Directory<a class="headerlink" href="#working-directory" title="Permalink to this heading">#</a></h2>
+<p>For this tutorial, We are working on these folder <code class="docutils literal notranslate"><span class="pre">/mnt/x/Temp/CHIRPS/SPI/mar/</span></code> directory. We have sub-folders inside this directory:</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">00_downloads</span></code></p>
+<p>Place to put downloaded CHIRPS data</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">01_input_geotiff</span></code></p>
+<p>Place to put GeoTIFF file that will use to convert to single netCDF with time dimension enabled</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">02_input_netcdf</span></code></p>
+<p>Place to put netCDF data that will use as an input</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">03_intermediate_output_netcdf</span></code></p>
+<p>Place to put netCDF outputt generated from <code class="docutils literal notranslate"><span class="pre">climate-indices</span></code> package</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">04_fitting</span></code></p>
+<p>Place to put fitting parameters output from the calculation</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">05_spi_output_netcdf</span></code></p>
+<p>Output folder for SPI calculation following CF convention</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">06_output_geotiff</span></code></p>
+<p>GeoTIFF output, generate by CDO and GDAL</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">07_drought_variable</span></code></p>
+<p>SPI-based drought characteristic output</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">08_tabular</span></code></p>
+<p>Tabular data of the SPI and derivative products, comes with admin2 information</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">09_shapefiles</span></code></p>
+<p>Place to put shapefile for clipping area of interest</p>
+</li>
+</ol>
+<p>Feel free to use your own preferences for this setting/folder arrangements.</p>
+</section>
+<section id="preparing-input-for-spi">
+<h2>1. Preparing input for SPI<a class="headerlink" href="#preparing-input-for-spi" title="Permalink to this heading">#</a></h2>
+<p>SPI requires monthly rainfall data, and there are many source providing global high-resolution gridded monthly rainfall data:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://chc.ucsb.edu/data/chirps">CHIRPS</a></p></li>
+<li><p><a class="reference external" href="https://disc.gsfc.nasa.gov/datasets/GPM_3IMERGM_06/summary?keywords=IMERG">IMERG</a></p></li>
+<li><p><a class="reference external" href="https://disc.gsfc.nasa.gov/datasets/FLDAS_NOAH01_C_GL_M_001/summary?keywords=FLDAS">FLDAS</a></p></li>
+<li><p><a class="reference external" href="https://data.nkn.uidaho.edu/dataset/monthly-climate-and-climatic-water-balance-global-terrestrial-surfaces-1958-2015">TerraClimate</a></p></li>
+<li><p><a class="reference external" href="https://catalogue.ceda.ac.uk/uuid/89e1e34ec3554dc98594a5732622bce9">CRU</a></p></li>
+</ul>
+<p>For better result, SPI required minimum 30-years of data.</p>
+<p>If you are prefer to use your own dataset also fine, you can still follow this guideline and adjust some steps and code related to filename, unit, format and structure.</p>
+<p>All the steps below required you to have <code class="docutils literal notranslate"><span class="pre">Anaconda</span></code> installed in your system along the required packages: <code class="docutils literal notranslate"><span class="pre">python</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, <code class="docutils literal notranslate"><span class="pre">gdal</span></code>, <code class="docutils literal notranslate"><span class="pre">nco</span></code>, <code class="docutils literal notranslate"><span class="pre">cdo</span></code>, <code class="docutils literal notranslate"><span class="pre">netcdf4</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, <code class="docutils literal notranslate"><span class="pre">geopandas</span></code>, <code class="docutils literal notranslate"><span class="pre">xarray</span></code>, <code class="docutils literal notranslate"><span class="pre">jupyter</span></code>.</p>
+<p>Please install above package in the new environment, so it will not break your existing one.</p>
+<section id="input-requirement">
+<h3>1.1. Input requirement<a class="headerlink" href="#input-requirement" title="Permalink to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://pypi.org/project/climate-indices/">climate-indices</a> python package enables the user to calculate SPI using any gridded netCDF dataset. You are required to install this using <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">climate-indices</span></code>. However, there are certain specifications for input files that vary based on input type.</p>
+<ul class="simple">
+<li><p>Precipitation unit must be written as <code class="docutils literal notranslate"><span class="pre">millimeters</span></code>, <code class="docutils literal notranslate"><span class="pre">milimeter</span></code>, <code class="docutils literal notranslate"><span class="pre">mm</span></code>, <code class="docutils literal notranslate"><span class="pre">inches</span></code>, <code class="docutils literal notranslate"><span class="pre">inch</span></code> or <code class="docutils literal notranslate"><span class="pre">in</span></code>.</p></li>
+<li><p>Data dimension and order must be written as <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code> (Windows machine required this order) or <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code> (Works tested on Mac/Linux and Linux running on WSL).</p></li>
+<li><p>If your study area are big, it’s better to prepare all the data following this dimension order: <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code> as all the data will force following this order during SPEI calculation by NCO module. Let say you only prepare the data as is (leaving the order to <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>), it also acceptable but it will required lot of memory to use re-ordering the dimension, and usually NCO couldn’t handle all the process and failed.</p></li>
+</ul>
+</section>
+<section id="download-chirps-data">
+<h3>1.2. Download CHIRPS data<a class="headerlink" href="#download-chirps-data" title="Permalink to this heading">#</a></h3>
+<p>Let’s download CHIRPS <a class="reference external" href="https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/">monthly data in GeoTIFF</a> format and prepare it as input for SPI calculation.</p>
+<ul class="simple">
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">/00_downloads</span></code> folder in your directory. Download using <code class="docutils literal notranslate"><span class="pre">wget</span></code> all CHIRPS monthly data in GeoTIFF format from Jan 1981 to May 2023 (this is lot of data +-7GB zipped files, and become 27GB after extraction, please make sure you have bandwidth and unlimited data package). Paste and Enter below script in your Terminal.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>CHIRPS
+<span class="nb">cd</span><span class="w"> </span>CHIRPS<span class="w"> </span>
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">URL</span><span class="o">=</span><span class="s1">&#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_monthly/tifs/&#39;</span><span class="p">;</span><span class="w"> </span>curl<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$URL</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;a href=&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>perl<span class="w"> </span>-pe<span class="w"> </span><span class="s1">&#39;s|.*href=&quot;(.*?)&quot;.*|\1|&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>f<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>wget<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$URL</span><span class="s2">&quot;</span>/<span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span><span class="w"> </span><span class="o">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Gunzip all the downloaded files</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gunzip<span class="w"> </span>*.gz
+</pre></div>
+</div>
+</section>
+<section id="clip-data-using-a-shapefile-based-on-area-of-interest">
+<h3>1.3. Clip data using a shapefile based on area of interest<a class="headerlink" href="#clip-data-using-a-shapefile-based-on-area-of-interest" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Download the Morocco boundary shapefile <a class="github reference external" href="https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip">datapartnership/myanmar-economic-monitor</a>. And save it in the <code class="docutils literal notranslate"><span class="pre">09_shapefiles</span></code> directory above then unzip it.</p></li>
+</ul>
+<p>!!! info
+You can use your own boundary in shapefile and use it to clip the rainfall raster data based on your preferred area of interest.</p>
+<ul class="simple">
+<li><p>Clip your area of interest using Morocco boundary and save it to <code class="docutils literal notranslate"><span class="pre">01_input_geotiff</span></code> directory. We will use <code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code> command from GDAL to clip all GeoTIFF files in a folder.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>find<span class="w"> </span>*.tif<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>gdalwarp<span class="w"> </span>--config<span class="w"> </span>GDALWARP_IGNORE_BAD_CUTLINE<span class="w"> </span>YES<span class="w"> </span>-srcnodata<span class="w"> </span>NoData<span class="w"> </span>-dstnodata<span class="w"> </span>-9999<span class="w"> </span>-cutline<span class="w"> </span>../09_shapefiles/mar_grid_diss.shp<span class="w"> </span>-crop_to_cutline<span class="w"> </span><span class="nv">$i</span><span class="w"> </span>../01_input_geotiff/<span class="nv">$i</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</pre></div>
+</div>
+<p>Then rename all the GeoTIFF file using below code</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>chirps-v2.0.*.tif<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># Extract year and month from filename</span>
+<span class="w">    </span><span class="nv">year</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span>-f3<span class="k">)</span>
+<span class="w">    </span><span class="nv">month</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="w"> </span>-f4<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span>-f1<span class="k">)</span>
+
+<span class="w">    </span><span class="c1"># Construct new filename</span>
+<span class="w">    </span><span class="nv">new_filename</span><span class="o">=</span><span class="s2">&quot;mar_cli_chirps_precip_month1_</span><span class="si">${</span><span class="nv">year</span><span class="si">}${</span><span class="nv">month</span><span class="si">}</span><span class="s2">.tif&quot;</span>
+
+<span class="w">    </span><span class="c1"># Rename the file</span>
+<span class="w">    </span>mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_filename</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p>If you have limited data connection or lazy to download +-7GB and process +-27GB data, you can get pre-processed clipped data for Morocco covering Jan 1981 to May 2023, with file size +-29MB. Link: <a class="github reference external" href="https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/chirps/morocco_chirps_geotiff.zip">datapartnership/myanmar-economic-monitor</a></p>
+</section>
+<section id="convert-geotiffs-to-single-netcdf">
+<h3>1.4. Convert GeoTIFFs to single netCDF<a class="headerlink" href="#convert-geotiffs-to-single-netcdf" title="Permalink to this heading">#</a></h3>
+<p>Use below script to convert all GeoTIFF file in a folder into single netCDF file that is <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html">CF-Compliant</a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Convert CHIRPS GeoTIFF in a folder to single NetCDF file with time dimension enabled that is CF-Compliant</span>
+<span class="sd">http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html</span>
+<span class="sd"> </span>
+<span class="sd">Based on Rich Signell&#39;s answer on StackExchange: https://gis.stackexchange.com/a/70487</span>
+<span class="sd">This script was tested using CHIRPS monthly data. Adjustment is needed if using other timesteps data for CHIRPS</span>
+
+<span class="sd">NCO (http://nco.sourceforge.net) and GDAL (https://gdal.org) must be installed before using this script</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
+<span class="kn">import</span> <span class="nn">netCDF4</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/01_input_geotiff/mar_cli_chirps_precip_month1_198101.tif&#39;</span><span class="p">)</span> <span class="c1"># Data location</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span>
+<span class="n">nlat</span><span class="p">,</span><span class="n">nlon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">GetGeoTransform</span><span class="p">()</span> <span class="c1">#bbox, interval</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nlon</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># add half the x pixel size to the lon</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">nlat</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># add half the y pixel size to the lat</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flipud</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>  <span class="c1"># flip the latitudes</span>
+
+<span class="n">basedate</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Create NetCDF file</span>
+<span class="n">nco</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/02_input_netcdf/mar_cli_chirps_monthly_1981_2023.nc&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">,</span><span class="n">clobber</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Output name</span>
+
+<span class="c1"># Create dimensions, variables and attributes:</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span><span class="n">nlon</span><span class="p">)</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span><span class="n">nlat</span><span class="p">)</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">createDimension</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">timeo</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="s1">&#39;f4&#39;</span><span class="p">,(</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;days since 1980-1-1 00:00:00&#39;</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;time&#39;</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">calendar</span> <span class="o">=</span> <span class="s1">&#39;gregorian&#39;</span>
+<span class="n">timeo</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;T&#39;</span>
+
+<span class="n">lono</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span><span class="s1">&#39;f4&#39;</span><span class="p">,(</span><span class="s1">&#39;lon&#39;</span><span class="p">))</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_east&#39;</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;longitude&#39;</span>
+<span class="n">lono</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+
+<span class="n">lato</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span><span class="s1">&#39;f4&#39;</span><span class="p">,(</span><span class="s1">&#39;lat&#39;</span><span class="p">))</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;degrees_north&#39;</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;latitude&#39;</span>
+<span class="n">lato</span><span class="o">.</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;Y&#39;</span>
+
+<span class="c1"># Create container variable for CRS: lon/lat WGS84 datum</span>
+<span class="n">crso</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;crs&#39;</span><span class="p">,</span><span class="s1">&#39;i4&#39;</span><span class="p">)</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;Lon/Lat Coords in WGS84&#39;</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">grid_mapping_name</span><span class="o">=</span><span class="s1">&#39;latitude_longitude&#39;</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">longitude_of_prime_meridian</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">semi_major_axis</span> <span class="o">=</span> <span class="mf">6378137.0</span>
+<span class="n">crso</span><span class="o">.</span><span class="n">inverse_flattening</span> <span class="o">=</span> <span class="mf">298.257223563</span>
+
+<span class="c1"># Create float variable for precipitation data, with chunking</span>
+<span class="n">pcpo</span> <span class="o">=</span> <span class="n">nco</span><span class="o">.</span><span class="n">createVariable</span><span class="p">(</span><span class="s1">&#39;precip&#39;</span><span class="p">,</span> <span class="s1">&#39;f4&#39;</span><span class="p">,</span>  <span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">),</span><span class="n">zlib</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">fill_value</span><span class="o">=-</span><span class="mf">9999.</span><span class="p">)</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;mm&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">standard_name</span> <span class="o">=</span> <span class="s1">&#39;convective precipitation rate&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">long_name</span> <span class="o">=</span> <span class="s1">&#39;Climate Hazards group InfraRed Precipitation with Stations&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">time_step</span> <span class="o">=</span> <span class="s1">&#39;monthly&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">missing_value</span> <span class="o">=</span> <span class="o">-</span><span class="mf">9999.</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lat_min</span> <span class="o">=</span> <span class="mf">27.65</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lat_max</span> <span class="o">=</span> <span class="mf">35.90</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lon_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">13.15</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">geospatial_lon_max</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.00</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">grid_mapping</span> <span class="o">=</span> <span class="s1">&#39;crs&#39;</span>
+<span class="n">pcpo</span><span class="o">.</span><span class="n">set_auto_maskandscale</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Additional attributes</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">Conventions</span><span class="o">=</span><span class="s1">&#39;CF-1.6&#39;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;CHIRPS v2.0&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">history</span> <span class="o">=</span> <span class="s2">&quot;created by Climate Hazards Group. University of California at Santa Barbara&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;Version 2.0&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">comments</span> <span class="o">=</span> <span class="s2">&quot;time variable denotes the first day of the given month.&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">website</span> <span class="o">=</span> <span class="s2">&quot;https://www.chc.ucsb.edu/data/chirps&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">date_created</span> <span class="o">=</span> <span class="s2">&quot;2023-07-12&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">creator_name</span> <span class="o">=</span> <span class="s2">&quot;Benny Istanto&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">creator_email</span> <span class="o">=</span> <span class="s2">&quot;bistanto@worldbank.org&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">institution</span> <span class="o">=</span> <span class="s2">&quot;GOST/DECAT/DEC Data Group, The World Bank&quot;</span>
+<span class="n">nco</span><span class="o">.</span><span class="n">note</span> <span class="o">=</span> <span class="s2">&quot;The data is developed to support drought monitoring in Marocco. This activities will support the World Bank to assess extreme dry and wet periods&quot;</span>
+
+<span class="c1"># Write lon,lat</span>
+<span class="n">lono</span><span class="p">[:]</span><span class="o">=</span><span class="n">lon</span>
+<span class="n">lato</span><span class="p">[:]</span><span class="o">=</span><span class="n">lat</span>
+
+<span class="n">pat</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;mar_cli_chirps_precip_month1_([0-9]</span><span class="si">{6}</span><span class="s1">)\.tif$&#39;</span><span class="p">)</span>
+<span class="n">itime</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="c1"># Step through data, writing time and data to NetCDF</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;../SPI/mar/01_input_geotiff/&#39;</span><span class="p">):</span> <span class="c1"># GeoTIFF location</span>
+    <span class="n">dirs</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">files</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+            <span class="n">date_str</span> <span class="o">=</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># This will give you &#39;198101&#39;</span>
+            <span class="n">date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="s1">&#39;%Y%m&#39;</span><span class="p">)</span>  <span class="c1"># Convert to datetime</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+            <span class="n">dtime</span><span class="o">=</span><span class="p">(</span><span class="n">date</span><span class="o">-</span><span class="n">basedate</span><span class="p">)</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="o">/</span><span class="mf">86400.</span>
+            <span class="n">timeo</span><span class="p">[</span><span class="n">itime</span><span class="p">]</span><span class="o">=</span><span class="n">dtime</span>
+            <span class="c1"># precipitation</span>
+            <span class="n">pcp_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">pcp_path</span><span class="p">)</span>
+            <span class="n">pcp</span><span class="o">=</span><span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">pcp_path</span><span class="p">)</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">pcp</span><span class="o">.</span><span class="n">ReadAsArray</span><span class="p">()</span> <span class="c1"># data</span>
+            <span class="n">pcpo</span><span class="p">[</span><span class="n">itime</span><span class="p">,:,:]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">flipud</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># flip the data in y-direction</span>
+            <span class="n">itime</span><span class="o">=</span><span class="n">itime</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="n">nco</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>After completed, you will find the result in the folder <code class="docutils literal notranslate"><span class="pre">02_input_netcdf</span></code></p>
+</section>
+<section id="check-variable-and-attribute">
+<h3>1.5. Check variable and attribute<a class="headerlink" href="#check-variable-and-attribute" title="Permalink to this heading">#</a></h3>
+<p>As explain in Step 1.1. Input requirement above, we need to check the variable and attribute on above result to make sure all meet the requirements.</p>
+<ul>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">02_input_netcdf</span></code> folder in the working directory. Then execute below command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump<span class="w"> </span>-h<span class="w"> </span>mar_cli_chirps_monthly_1981_2023.nc
+</pre></div>
+</div>
+</li>
+<li><p>As you can see from the result, all the requirement is completed: unit is in <code class="docutils literal notranslate"><span class="pre">mm</span></code>, order dimension for each variables is <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, and <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension is in <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code>. The dataset can be used as input to <code class="docutils literal notranslate"><span class="pre">climate-indices</span></code> package for computing SPI.</p>
+<ul class="simple">
+<li><p>Following last point in the section 1.1, you could consider to re-order the dimension into <code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code>,<code class="docutils literal notranslate"><span class="pre">time</span></code> as all the data will force following this order during SPI calculation by NCO module</p></li>
+<li><p>Let’s re-order the variables into <code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code>,<code class="docutils literal notranslate"><span class="pre">time</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncpdq<span class="w"> </span>-a<span class="w"> </span>lat,lon,time<span class="w"> </span>mar_cli_chirps_monthly_1981_2023.nc<span class="w"> </span>mar_cli_chirps_monthly_1981_2023_temp1.nc
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Notes on re-ordering process (Case by case)</strong></p>
+<p>After re-ordering the variables, sometimes user experience <code class="docutils literal notranslate"><span class="pre">lat</span></code> or <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimension becomes <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> which is wrong. The <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension should be the <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> dimension.</p>
+<p>Fortunately you can do this to fix the <code class="docutils literal notranslate"><span class="pre">lat</span></code> or <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimension who becomes <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncks<span class="w"> </span>--fix_rec_dmn<span class="w"> </span>lat<span class="w"> </span>mar_cli_chirps_monthly_1981_2023_temp1.nc<span class="w"> </span>-o<span class="w"> </span>mar_cli_chirps_monthly_1981_2023_temp2.nc
+</pre></div>
+</div>
+<p>And to make <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension again using <code class="docutils literal notranslate"><span class="pre">ncks</span></code> command below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncks<span class="w"> </span>--mk_rec_dmn<span class="w"> </span><span class="nb">time</span><span class="w"> </span>mar_cli_chirps_monthly_1981_2023_temp2.nc<span class="w"> </span>-o<span class="w"> </span>mar_cli_chirps_monthly_1981_2023_llt.nc
+</pre></div>
+</div>
+<p>If you don’t come accross the problem, <code class="docutils literal notranslate"><span class="pre">lat</span></code> or <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimension becomes <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code>, then skip above process and go directly to step below.</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="calculate-spi">
+<h2>2. Calculate SPI<a class="headerlink" href="#calculate-spi" title="Permalink to this heading">#</a></h2>
+<p>Let’s start the calculation!</p>
+<ul>
+<li><p>In your Terminal, run the following code to calculate SPI 1-month (assume we will use file <code class="docutils literal notranslate"><span class="pre">mar_cli_chirps_monthly_1981_2023.nc</span></code> as input)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>process_climate_indices<span class="w"> </span>--index<span class="w"> </span>spi<span class="w"> </span>--periodicity<span class="w"> </span>monthly<span class="w"> </span>--scales<span class="w"> </span><span class="m">1</span><span class="w"> </span>--calibration_start_year<span class="w"> </span><span class="m">1991</span><span class="w"> </span>--calibration_end_year<span class="w"> </span><span class="m">2020</span><span class="w"> </span>--netcdf_precip<span class="w"> </span>mar_cli_chirps_monthly_1981_2023.nc<span class="w"> </span>--var_name_precip<span class="w"> </span>precip<span class="w"> </span>--output_file_base<span class="w"> </span>../03_intermediate_output_netcdf/mar_cli_chirps<span class="w"> </span>--multiprocessing<span class="w"> </span>all<span class="w"> </span>--save_params<span class="w"> </span>../04_fitting/mar_cli_chirps_spi01_1991_2023_fitting.nc<span class="w"> </span>--overwrite
+</pre></div>
+</div>
+<p>During the calculation, it will printed some information in your Terminal to show the progress until completed</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">53</span><span class="p">:</span><span class="mi">42</span> <span class="n">INFO</span> <span class="n">Start</span> <span class="n">time</span><span class="p">:</span>    <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span> <span class="mi">18</span><span class="p">:</span><span class="mi">53</span><span class="p">:</span><span class="mf">42.522815</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">53</span><span class="p">:</span><span class="mi">42</span> <span class="n">INFO</span> <span class="n">Computing</span> <span class="n">monthly</span> <span class="n">SPI</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">53</span><span class="p">:</span><span class="mi">44</span> <span class="n">INFO</span> <span class="n">Computing</span> <span class="mi">1</span><span class="o">-</span><span class="n">month</span> <span class="n">SPI</span> <span class="p">(</span><span class="n">Gamma</span><span class="p">)</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">54</span><span class="p">:</span><span class="mi">25</span> <span class="n">INFO</span> <span class="n">Computing</span> <span class="mi">1</span><span class="o">-</span><span class="n">month</span> <span class="n">SPI</span> <span class="p">(</span><span class="n">Pearson</span><span class="p">)</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">32</span> <span class="n">INFO</span> <span class="n">End</span> <span class="n">time</span><span class="p">:</span>      <span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span> <span class="mi">18</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mf">32.233653</span>
+<span class="mi">2023</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">13</span>  <span class="mi">18</span><span class="p">:</span><span class="mi">55</span><span class="p">:</span><span class="mi">32</span> <span class="n">INFO</span> <span class="n">Elapsed</span> <span class="n">time</span><span class="p">:</span>  <span class="mi">0</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mf">49.710838</span>
+</pre></div>
+</div>
+</li>
+<li><p>Above code is example for calculating SPI 1-months. Example: you are interested to calculate SPI 3-months or SPI 3, 6 and 12-months, then adjust above code into <code class="docutils literal notranslate"><span class="pre">--scales</span> <span class="pre">3</span></code> or <code class="docutils literal notranslate"><span class="pre">--scales</span> <span class="pre">3</span> <span class="pre">6</span> <span class="pre">12</span></code>. Don’t forget to adjust the Fitting output filename too.</p></li>
+<li><p>The above command will compute SPI (both gamma and Pearson Type III distributions) from monthly precipitation dataset, and the calibration period used will be Jan-1991 through Dec-2020. The index will be computed at <code class="docutils literal notranslate"><span class="pre">1-month</span></code> timescales. The output files will be &lt;<code class="docutils literal notranslate"><span class="pre">out_dir&gt;/mar_cli_chirps_spi_gamma_xx.nc</span></code>, and <code class="docutils literal notranslate"><span class="pre">&lt;out_dir&gt;/mar_cli_chirps_spi_pearson_xx.nc</span></code>.</p></li>
+</ul>
+</section>
+<section id="re-order-the-dimension-again-to-follow-the-cf-convention">
+<h2>3. Re-order the dimension (again) to follow the CF Convention<a class="headerlink" href="#re-order-the-dimension-again-to-follow-the-cf-convention" title="Permalink to this heading">#</a></h2>
+<p>SPI output generated by <code class="docutils literal notranslate"><span class="pre">climate-indices</span></code> has the dimension order <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code> by default. Let’s re-order the dimension into <code class="docutils literal notranslate"><span class="pre">time</span></code>,<code class="docutils literal notranslate"><span class="pre">lat</span></code>,<code class="docutils literal notranslate"><span class="pre">lon</span></code> using <code class="docutils literal notranslate"><span class="pre">ncpdq</span></code> command from NCO and save the result to folder <code class="docutils literal notranslate"><span class="pre">05_spi_output_netcdf</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncpdq<span class="w"> </span>-a<span class="w"> </span>time,lat,lon<span class="w"> </span>mar_cli_chirps_spi_gamma_1_month.nc<span class="w"> </span>../05_spi_output_netcdf/mar_cli_chirps_spi_gamma_1_month.nc
+</pre></div>
+</div>
+<p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">05_spi_output_netcdf</span></code>, check result and metadata to make sure everything is correct.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncdump<span class="w"> </span>-h<span class="w"> </span>mar_cli_chirps_spi_gamma_1_month.nc
+</pre></div>
+</div>
+</section>
+<section id="visualize-the-result-using-panoply">
+<h2>4. Visualize the result using Panoply<a class="headerlink" href="#visualize-the-result-using-panoply" title="Permalink to this heading">#</a></h2>
+<p>Let visualize the result using <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/">Panoply</a> netCDF, HDF and GRIB Data Viewer. If you don’t have the software, please install it from <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/download/">https://www.giss.nasa.gov/tools/panoply/download/</a></p>
+<ul>
+<li><p>From the <code class="docutils literal notranslate"><span class="pre">05_spi_output_netcdf</span></code> directory, right-click file <code class="docutils literal notranslate"><span class="pre">mar_cli_chirps_spi_gamma_1_month.nc</span></code> and Open With Panoply.</p></li>
+<li><p>From the Datasets tab select <code class="docutils literal notranslate"><span class="pre">spi_gamma_1_month</span></code> and click Create Plot</p></li>
+<li><p>In the Create Plot window select option Georeferenced Longitude-Latitude.</p></li>
+<li><p>When the Plot window opens:</p>
+<ul class="simple">
+<li><p>Array tab: Change the time into <code class="docutils literal notranslate"><span class="pre">509</span></code> to view data on <code class="docutils literal notranslate"><span class="pre">May</span> <span class="pre">2023</span></code></p></li>
+<li><p>Scale tab: Change value on Min <code class="docutils literal notranslate"><span class="pre">-3.09</span></code>, Max <code class="docutils literal notranslate"><span class="pre">3.09</span></code>, Major <code class="docutils literal notranslate"><span class="pre">6</span></code>, Color Table <code class="docutils literal notranslate"><span class="pre">CB_RdBu_09.cpt</span></code></p></li>
+<li><p>Grid tab: Zoom in the map through menu-editor Plot &gt; Zoom - Plot In few times until Morocco appear proportionally, then Change value on Center on Lon <code class="docutils literal notranslate"><span class="pre">-10.0</span></code> Lat <code class="docutils literal notranslate"><span class="pre">32.0</span></code>, then  Set grid spacing <code class="docutils literal notranslate"><span class="pre">2.0</span></code> and Labels on every grid lines.</p></li>
+<li><p>Overlays tab: Change <code class="docutils literal notranslate"><span class="pre">Overlay</span> <span class="pre">1</span></code> to <code class="docutils literal notranslate"><span class="pre">MWDB_Coasts_Countries_1.cnob</span></code></p></li>
+</ul>
+<p><img alt="Panoply" src="../_images/panoply.png" /></p>
+</li>
+</ul>
+</section>
+<section id="convert-the-result-to-geotiff">
+<h2>5. Convert the result to GeoTIFF<a class="headerlink" href="#convert-the-result-to-geotiff" title="Permalink to this heading">#</a></h2>
+<p>Sometimes we need to have the data in different format like GeoTIFF for further process using common GIS software. If that so, we need Climate Data Operator (CDO) to do a conversion of the result into GeoTIFF format.</p>
+<ul>
+<li><p>Navigate your Terminal to folder <code class="docutils literal notranslate"><span class="pre">05_spi_output_netcdf</span></code></p></li>
+<li><p>Then convert all <code class="docutils literal notranslate"><span class="pre">mar_cli_chirps_spi_gamma_1_month.nc</span></code> value into GeoTIFF with <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension information as the filename using CDO and GDAL. Usually the geotiff image will not have projection information, so we will add that information via the script: <code class="docutils literal notranslate"><span class="pre">-a_ullr</span> <span class="pre">ulx</span> <span class="pre">uly</span> <span class="pre">lrx</span> <span class="pre">lry</span> <span class="pre">-a_srs</span> <span class="pre">EPSG:4326</span></code></p></li>
+<li><p>Execute below script and save the result to folder <code class="docutils literal notranslate"><span class="pre">06_output_geotiff</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>t<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>cdo<span class="w"> </span>showdate<span class="w"> </span>mar_cli_chirps_spi_gamma_1_month.nc<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">	</span><span class="nv">formatted_date</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>-d<span class="w"> </span><span class="nv">$t</span><span class="w"> </span>+%Y%m%d<span class="k">)</span>
+<span class="w">    </span>cdo<span class="w"> </span>seldate,<span class="nv">$t</span><span class="w"> </span>mar_cli_chirps_spi_gamma_1_month.nc<span class="w"> </span>dummy.nc<span class="w">     </span>
+<span class="w">    </span>gdal_translate<span class="w"> </span>-of<span class="w"> </span>GTiff<span class="w"> </span>-a_ullr<span class="w"> </span>-13.15<span class="w"> </span><span class="m">35</span>.90<span class="w"> </span>-1.00<span class="w"> </span><span class="m">27</span>.65<span class="w"> </span>-a_srs<span class="w"> </span>EPSG:4326<span class="w"> </span>-co<span class="w"> </span><span class="nv">COMPRESS</span><span class="o">=</span>LZW<span class="w"> </span>-co<span class="w"> </span><span class="nv">PREDICTOR</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>dummy.nc<span class="w"> </span>../06_output_geotiff/mar_cli_chirps_spi01_<span class="si">${</span><span class="nv">formatted_date</span><span class="si">}</span>.tif
+<span class="k">done</span>
+</pre></div>
+</div>
+</li>
+<li><p>Next, you can continue to translate other SPI files.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="drought-eo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Satellite-based monitoring of drought conditions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="drought-howto-characteristics.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">How-to guide SPI-based drought characteristics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-directory">0. Working Directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-input-for-spi">1. Preparing input for SPI</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input-requirement">1.1. Input requirement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-chirps-data">1.2. Download CHIRPS data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clip-data-using-a-shapefile-based-on-area-of-interest">1.3. Clip data using a shapefile based on area of interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-geotiffs-to-single-netcdf">1.4. Convert GeoTIFFs to single netCDF</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-variable-and-attribute">1.5. Check variable and attribute</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculate-spi">2. Calculate SPI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#re-order-the-dimension-again-to-follow-the-cf-convention">3. Re-order the dimension (again) to follow the CF Convention</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-result-using-panoply">4. Visualize the result using Panoply</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-the-result-to-geotiff">5. Convert the result to GeoTIFF</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By World Bank
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on Jul 26, 2023.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+    <b>All content (unless otherwise specified) is subject to the <a href="https://raw.githubusercontent.com/worldbank/template/main/LICENSE">World Bank Master Community License Agreement.</a></b>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
