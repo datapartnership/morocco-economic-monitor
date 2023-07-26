@@ -11,8 +11,9 @@ parts:
     chapters:
       - file: docs/drought-readme
         sections:
-        - file: docs/drought-spi
-        - file: docs/drought-howto
+        - file: docs/drought-eo
+        - file: docs/drought-howto-spianalysis
+        - file: docs/drought-howto-characteristics
   - caption: Sample Indicators and Insights
     chapters:
       - file: docs/sample-indicators  
