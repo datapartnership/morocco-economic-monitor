@@ -700,4 +700,4 @@ plt.show()
 
 Above script will generate a map on the Drought characteristics based on various SPI time scale
 
-![SPI-DR](./images/maps/mar_cli_spi_drought_characteristics_chirps.png.png)
+![SPI-DR](./images/maps/mar_cli_spi_drought_characteristics_chirps.png)

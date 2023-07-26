@@ -71,27 +71,31 @@ Below is the SPI example for different time scale and how to interpret the value
 
 	Provides an indication of precipitation patterns over a medium time scale. SPI values below 1.5 for these time scales are usually a good indication that significant impacts are occurring in agriculture and may be showing up in other sectors as well.
 
-	![SPI9](./images/spi01.png)
+	![SPI9](./images/spi09.png)
 
 * 12 month
 
 	Reflects long term precipitation patterns. Longer SPIs tend toward zero unless a specific trend is taking place. SPIs of these time scales are probably tied to streamflow, reservoir levels, and even groundwater levels at the longer time scales. In some locations of the country, the 12 month SPI is most closely related with the Palmer Index, and the two indices should reflect similar conditions.
 
-	![SPI12](./images/spi01.png)
+	![SPI12](./images/spi12.png)
+
+Below is the latest SPI-12 condition based on CHIRPS as of May 2023.
+
+![SPI12-202305](./images/maps/mar_cli_chirps_spi12_20230501.png)
 
 In addition to geographical maps, time series charts offer a compelling visualization tool that vividly captures the evolution of drought conditions. These charts, with their month-by-month and year-by-year granularity, effectively illustrate the changing dynamics of drought. Furthermore, they provide insightful details on the percentage of regions affected over time, painting a comprehensive picture of how droughts impact different areas periodically. 
 
 * National
 
-	![SPI6-timeseries-adm0](./images/chart_spi06/chart_spi06_ma000000.png)
+	![SPI6-timeseries-adm0](./images/chart_spi06/chirps_spi06_ma000000.png)
 
 * Admin1
 
-	![SPI6-timeseries-adm1](./images/chart_spi06/chart_spi06_ma001000.png)
+	![SPI6-timeseries-adm1](./images/chart_spi06/chirps_spi06_ma001000.png)
 
 * Admin2
 
-	![SPI6-timeseries-adm2](./images/chart_spi06/chart_spi06_ma001001.png)
+	![SPI6-timeseries-adm2](./images/chart_spi06/chirps_spi06_ma001001.png)
 
 ## SPI-based drought characteristics
 
