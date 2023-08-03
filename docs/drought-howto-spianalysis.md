@@ -98,7 +98,7 @@ gunzip *.gz
 
 ### 1.3. Clip data using a shapefile based on area of interest
 
-* Download the Morocco boundary shapefile [https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip](https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip). And save it in the `09_shapefiles` directory above then unzip it.
+* Download the Morocco boundary shapefile [https://github.com/datapartnership/morocco-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip](https://github.com/datapartnership/morocco-economic-monitor/blob/main/data/shapefiles/mar_grid_diss.zip). And save it in the `09_shapefiles` directory above then unzip it.
 
 !!! info
     You can use your own boundary in shapefile and use it to clip the rainfall raster data based on your preferred area of interest.
@@ -125,7 +125,7 @@ for file in chirps-v2.0.*.tif; do
 done
 ```
 
-If you have limited data connection or lazy to download +-7GB and process +-27GB data, you can get pre-processed clipped data for Morocco covering Jan 1981 to May 2023, with file size +-29MB. Link: [https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/chirps/morocco_chirps_geotiff.zip](https://github.com/datapartnership/myanmar-economic-monitor/blob/main/data/chirps/morocco_chirps_geotiff.zip)
+If you have limited data connection or lazy to download +-7GB and process +-27GB data, you can get pre-processed clipped data for Morocco covering Jan 1981 to May 2023, with file size +-29MB. Link: [https://github.com/datapartnership/morocco-economic-monitor/blob/main/data/chirps/morocco_chirps_geotiff.zip](https://github.com/datapartnership/morocco-economic-monitor/blob/main/data/chirps/morocco_chirps_geotiff.zip)
 
 ### 1.4. Convert GeoTIFFs to single netCDF
 
