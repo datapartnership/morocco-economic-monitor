@@ -1,6 +1,4 @@
-# Drought
-
-## Summary
+# Summary
 
 Over the past four decades, Morocco has witnessed a significant increase in drought frequency and intensity[^6][^19]. This North African country, known for its diverse landscapes ranging from coastal plains to mountainous regions and deserts, depends largely on agriculture, which forms the economic backbone of rural areas[^6][^21]. The fluctuation in rainfall patterns, primarily due to climate change, has led to recurring droughts causing substantial agricultural losses and impacting the livelihood of the rural population[^4][^11][^22].
 

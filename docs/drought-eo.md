@@ -97,6 +97,15 @@ In addition to geographical maps, time series charts offer a compelling visualiz
 
 	![SPI6-timeseries-adm2](./images/chart_spi06/chirps_spi06_ma001001.png)
 
+Other chart for different time scale from National, Admin1 and Admin2 level are available in folder
+
+* [SPI 3-month](https://github.com/datapartnership/morocco-economic-monitor/tree/main/docs/images/chart_spi03)
+
+* [SPI 6-month](https://github.com/datapartnership/morocco-economic-monitor/tree/main/docs/images/chart_spi06)
+
+* [SPI 12-month](https://github.com/datapartnership/morocco-economic-monitor/tree/main/docs/images/chart_spi12)
+
+
 ## SPI-based drought characteristics
 
 Droughts usually take a season or more to develop. Longer time scales (>12 months) are better to measure the effects of a precipitation deficit on different water resource components (stream flow, soil moisture, groundwater and reservoir storage) and the impact to agricultural practices in longer term.
