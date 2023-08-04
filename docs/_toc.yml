@@ -9,9 +9,9 @@ parts:
       - file: docs/foundational_datasets_and_data_products.md
   - caption: Data Products
     chapters:
-      - caption: Drought
+      - file: docs/drought-index
         sections:
-        - file: docs/drought-readme
+        - file: docs/drought-summary
         - file: docs/drought-eo
         - file: docs/drought-howto-spianalysis
         - file: docs/drought-howto-characteristics
