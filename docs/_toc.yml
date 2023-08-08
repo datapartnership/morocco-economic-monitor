@@ -15,6 +15,7 @@ parts:
         - file: docs/drought-eo
         - file: docs/drought-howto-spianalysis
         - file: docs/drought-howto-characteristics
+        - file: notebooks/visualizing-drought.ipynb
   - caption: Sample Indicators and Insights
     chapters:
       - file: docs/sample-indicators  
