@@ -15,10 +15,11 @@ parts:
         - file: docs/drought-eo
         - file: docs/drought-howto-spianalysis
         - file: docs/drought-howto-characteristics
-        - file: notebooks/visualizing-drought.ipynb
   - caption: Sample Indicators and Insights
     chapters:
-      - file: docs/sample-indicators  
+      - file: notebooks/visualizing-drought.ipynb
+      - file: notebooks/conflict-acled.ipynb
+      #- file: docs/sample-indicators  
   - caption: Acknowledgements
     chapters:
       - file: docs/team.md
