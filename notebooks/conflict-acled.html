@@ -398,6 +398,9 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="conflict-and-drought">
 <h1>Conflict and Drought<a class="headerlink" href="#conflict-and-drought" title="Permalink to this heading">#</a></h1>
 <p>Drought is often reported to lead to conflict in the form of violence or protests. There were <a class="reference external" href="https://phys.org/news/2017-10-thirsty-protests-morocco-shortages.html">‘thirsty protests’</a> in the country which saw citizens protesting over water shortages. news of these protests has only incraesed over the years. This notebook is an exploration of any observed correlations between drought conditions and protests within Morocco.</p>
+<p>This data is insufficient to show causation. The idea is to show that there is an increase in protests in Morocco, some of which are because of water, as suggested by sources outside this data, for instance, by the <a class="reference external" href="https://www.csis.org.mcas.ms/analysis/water-pressure-water-protest-and-state-legitimacy-maghreb">Centre for Strategic and International Studies</a> and the <a class="reference external" href="https://www.usip.org/publications/2022/06/morocco-reflects-global-south-dilemma-water-or-food">United States Institute of Peace</a>.</p>
+<p>Although there is research that suggests that water causes conflict, there is also enough evidence to show that water can enable cooperation. This is best articulated in <a class="reference external" href="https://openknowledge.worldbank.org.mcas.ms/server/api/core/bitstreams/7b8cb26b-a170-587a-8bbd-920e430ea81c/content?McasCtx=4&amp;McasTsid=20893">Borgomeo et. al., 2021.</a>.</p>
+<p>In this context, ACLED data is just meant to be a data point that can be monitored to see the trends in changing conflict and rising protests. I agree with your point that the narrative needs to be tighter. Depending on the rest of your report, if you think it can be useful, happy to modify the plots to a level of granularity you want to use.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
@@ -454,6 +457,13 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <img alt="../_images/f44ad448ac222e1e7a3f9c9c2e730d0aa5b070541a9879e123d862cd3d0612ef.png" src="../_images/f44ad448ac222e1e7a3f9c9c2e730d0aa5b070541a9879e123d862cd3d0612ef.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#p.plot(column=&#39;timestamp&#39;, cmap=&#39;Reds&#39;, legend=True, vmax=100)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </section>
