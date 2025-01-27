@@ -276,21 +276,21 @@ As explain in Step 1.1. Input requirement above, we need to check the variable a
 
 	:::{note}
     **Notes on re-ordering process (Case by case)**
-    
+  
     After re-ordering the variables, sometimes user experience `lat` or `lon` dimension becomes `UNLIMITED` which is wrong. The `time` dimension should be the `UNLIMITED` dimension.
-    
+  
     Fortunately you can do this to fix the `lat` or `lon` dimension who becomes `UNLIMITED` using `ncks` command below:
-    
+  
     ``` bash
     ncks --fix_rec_dmn lat mar_cli_chirps_monthly_1981_2023_temp1.nc -o mar_cli_chirps_monthly_1981_2023_temp2.nc
     ```
-    
+  
     And to make `UNLIMITED` the `time` dimension again using `ncks` command below:
-    
+  
     ``` bash
     ncks --mk_rec_dmn time mar_cli_chirps_monthly_1981_2023_temp2.nc -o mar_cli_chirps_monthly_1981_2023_llt.nc
     ```
-    
+  
     If you don't come accross the problem, `lat` or `lon` dimension becomes `UNLIMITED`, then skip above process and go directly to step below.
 	:::
 
@@ -350,7 +350,7 @@ Let visualize the result using [Panoply](https://www.giss.nasa.gov/tools/panoply
 	- Grid tab: Zoom in the map through menu-editor Plot > Zoom - Plot In few times until Morocco appear proportionally, then Change value on Center on Lon `-10.0` Lat `32.0`, then  Set grid spacing `2.0` and Labels on every grid lines.
 	- Overlays tab: Change `Overlay 1` to `MWDB_Coasts_Countries_1.cnob`
 
-	![Panoply](./images/panoply.png)
+	![Panoply](./images/others/panoply.png)
 
 
 ## 5. Convert the result to GeoTIFF

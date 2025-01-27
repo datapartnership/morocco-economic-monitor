@@ -199,7 +199,7 @@ print('Completed!')
 
 Above script will also generate a chart on the Maximum Drought Magnitude Over Time
 
-![DM](./images/drought-magnitude-overtime.png)
+![DM](./images/others/drought-magnitude-overtime.png)
 
 ## Drought Duration
 
@@ -278,7 +278,7 @@ print('Completed!')
 
 Above script will also generate a chart on the Maximum Drought Duration Over Time
 
-![DD](./images/drought-duration-overtime.png)
+![DD](./images/others/drought-duration-overtime.png)
 
 ## Drought Severity
 
@@ -353,7 +353,7 @@ print('Completed!')
 
 Above script will also generate a chart on the Mean Drought Severity Over Time
 
-![DS](./images/drought-severity-overtime.png)
+![DS](./images/others/drought-severity-overtime.png)
 
 ## SPI Classification
 
